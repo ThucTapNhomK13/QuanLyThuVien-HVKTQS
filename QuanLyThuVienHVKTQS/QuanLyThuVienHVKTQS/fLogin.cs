@@ -33,18 +33,10 @@ namespace QuanLyThuVienHVKTQS
             {
                 this.Hide();
                 frmMain.ShowDialog();
-                this.Show();
+                
+
             }
-        }
-
-        private void btnExit_MouseHover(object sender, EventArgs e)
-        {
-            btnExit.ForeColor = Color.Red;
-        }
-
-        private void btnExit_MouseLeave(object sender, EventArgs e)
-        {
-            btnExit.ForeColor = Color.White;
+            this.Show();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)

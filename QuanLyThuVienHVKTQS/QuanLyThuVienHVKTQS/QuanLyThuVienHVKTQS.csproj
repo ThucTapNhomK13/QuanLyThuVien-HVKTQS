@@ -98,6 +98,18 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Anh\AnhNguyen.jpg" />
+    <Content Include="Anh\AnhTuan.jpg" />
+    <Content Include="Anh\DungNguyen.jpg" />
+    <Content Include="Anh\HoaDinh.jpg" />
+    <Content Include="Anh\HoaNguyen.jpg" />
+    <Content Include="Anh\LeMinh.jpg" />
+    <Content Include="Anh\SonHa.jpg" />
+    <Content Include="Anh\Thien.jpg" />
+    <Content Include="Anh\ThuyHuong.jpg" />
+    <Content Include="FileQuerySQL\quanlythuvienHVKTQS.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

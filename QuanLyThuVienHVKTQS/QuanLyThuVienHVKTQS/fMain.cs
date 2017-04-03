@@ -17,14 +17,15 @@ namespace QuanLyThuVienHVKTQS
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void fMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Close();
+            MessageBox.Show("Bạn muốn thoát khỏi chương trình ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
         }
 
-        private void btnMin_Click(object sender, EventArgs e)
+        private void fMain_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
+
         }
     }
 }
