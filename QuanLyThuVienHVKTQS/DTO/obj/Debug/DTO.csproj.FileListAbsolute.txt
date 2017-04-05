@@ -1,5 +1,4 @@
 C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DTO\bin\Debug\DTO.dll
 C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DTO\bin\Debug\DTO.pdb
-C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DTO\obj\Debug\DTO.dll
 C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DTO\obj\Debug\DTO.pdb

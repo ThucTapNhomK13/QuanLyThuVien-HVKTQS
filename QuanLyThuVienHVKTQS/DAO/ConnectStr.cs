@@ -8,8 +8,8 @@ namespace DAO
 {
     public class ConnectStr
     {
-        public static string conStr = @"";
+        public static string conStr = @"Data Source=MRKCUONG\MKCUONG;Initial Catalog=QuanLyThuVienHVKTQS;Integrated Security=True";
 
-        public static string HungCuongSQL = @"";
+        public static string HungCuongSQL = @"Data Source=MRKCUONG\MKCUONG;Initial Catalog=QuanLyThuVienHVKTQS;Integrated Security=True";
     }
 }

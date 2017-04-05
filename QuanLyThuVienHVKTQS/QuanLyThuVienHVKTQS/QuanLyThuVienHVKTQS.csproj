@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBook.Designer.cs">
+      <DependentUpon>fBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCard.Designer.cs">
+      <DependentUpon>fCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fInformationUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInformationUser.Designer.cs">
+      <DependentUpon>fInformationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLoanPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLoanPayment.Designer.cs">
+      <DependentUpon>fLoanPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,8 +82,20 @@
     <Compile Include="fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="fNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhanSu.Designer.cs">
+      <DependentUpon>fNhanSu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fCard.resx">
+      <DependentUpon>fCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInformationUser.resx">
+      <DependentUpon>fInformationUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +110,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -101,14 +138,26 @@
   <ItemGroup>
     <Content Include="Anh\AnhNguyen.jpg" />
     <Content Include="Anh\AnhTuan.jpg" />
+    <Content Include="Anh\book-48.png" />
+    <Content Include="Anh\book128.png" />
+    <None Include="Anh\credict_card128.png" />
     <Content Include="Anh\DungNguyen.jpg" />
+    <None Include="Anh\exchange-icon128.png" />
+    <None Include="Anh\file-bookmark128.png" />
     <Content Include="Anh\HoaDinh.jpg" />
     <Content Include="Anh\HoaNguyen.jpg" />
+    <Content Include="Anh\identity128.png" />
+    <Content Include="Anh\KhoChua.png" />
+    <Content Include="Anh\KhoChua128.png" />
     <Content Include="Anh\LeMinh.jpg" />
+    <Content Include="Anh\Loaisach.png" />
+    <Content Include="Anh\loaisach128.png" />
     <Content Include="Anh\SonHa.jpg" />
+    <Content Include="Anh\thethuvien.png" />
     <Content Include="Anh\Thien.jpg" />
     <Content Include="Anh\ThuyHuong.jpg" />
     <Content Include="FileQuerySQL\quanlythuvienHVKTQS.sql" />
+    <None Include="Resources\book128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

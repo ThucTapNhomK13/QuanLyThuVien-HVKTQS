@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using BUL;
+
 namespace QuanLyThuVienHVKTQS
 {
     public partial class fLogin : Form
@@ -29,14 +31,27 @@ namespace QuanLyThuVienHVKTQS
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            using (fMain frmMain = new fMain())
+            if (NhanSuBUL.Instance.checkTaiKhoan(txtUser.Text, txtPass.Text))
             {
-                this.Hide();
-                frmMain.ShowDialog();
+                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (fMain frmMain = new fMain())
+                {
+                    
+                    this.Hide();
+                    frmMain.Ns = NhanSuBUL.Instance.TaiKhoan(txtUser.Text, txtPass.Text);
+                    frmMain.ShowDialog();
+                    this.txtUser.Clear();
+                    this.txtPass.Clear();
+                }
                 
-
+                this.Show();
             }
-            this.Show();
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+               
+            
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)

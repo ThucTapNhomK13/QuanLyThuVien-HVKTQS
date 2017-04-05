@@ -13,3 +13,7 @@ C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQ
 C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\QuanLyThuVienHVKTQS\obj\Debug\QuanLyThuVienHVKTQS.exe
 C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\QuanLyThuVienHVKTQS\obj\Debug\QuanLyThuVienHVKTQS.pdb
 C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\QuanLyThuVienHVKTQS\obj\Debug\QuanLyThuVienHVKTQS.fMain.resources
+C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\QuanLyThuVienHVKTQS\bin\Debug\DAO.dll
+C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\QuanLyThuVienHVKTQS\bin\Debug\DAO.pdb
+C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\QuanLyThuVienHVKTQS\obj\Debug\QuanLyThuVienHVKTQS.fCard.resources
+C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\QuanLyThuVienHVKTQS\obj\Debug\QuanLyThuVienHVKTQS.fInformationUser.resources
