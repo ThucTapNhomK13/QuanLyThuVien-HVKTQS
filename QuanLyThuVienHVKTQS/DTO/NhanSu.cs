@@ -137,5 +137,7 @@ namespace DTO
             Matkhau = dr["matkhau"].ToString();
             Quanly = int.Parse(dr["quanly"].ToString());
         }
+
+
     }
 }

@@ -48,7 +48,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(368, 66);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 10;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
@@ -66,7 +66,7 @@
             this.btnExit.Location = new System.Drawing.Point(308, 20);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(33, 37);
-            this.btnExit.TabIndex = 0;
+            this.btnExit.TabIndex = 10;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -122,11 +122,11 @@
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(181)))), ((int)(((byte)(230)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogin.Location = new System.Drawing.Point(37, 296);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(88, 41);
+            this.btnLogin.Size = new System.Drawing.Size(304, 62);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -141,7 +141,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(304, 36);
-            this.txtPass.TabIndex = 5;
+            this.txtPass.TabIndex = 1;
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // fLogin
@@ -149,7 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(141)))), ((int)(((byte)(202)))));
-            this.ClientSize = new System.Drawing.Size(368, 370);
+            this.ClientSize = new System.Drawing.Size(368, 387);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label3);

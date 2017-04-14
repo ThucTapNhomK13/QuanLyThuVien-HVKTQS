@@ -33,6 +33,64 @@ namespace BUL
 
         private NhanSuBUL() { }
 
+        public bool insertNhanSu(NhanSu ns)
+        {
+            string query = " insert into NhanSu ";
+            query += " (ten, ngaysinh, anhdaidien, gioitinh, taikhoan, matkhau, quanly) ";
+            query += " values (@ten, @ngaysinh, @anhdaidien, @gioitinh, @taikhoan, @matkhau, @quanly) ";
+
+            Dictionary<string, object> paras = new Dictionary<string, object>();
+            paras.Add("@ten", ns.Hoten);
+            paras.Add("@ngaysinh", ns.Ngaysinh);
+            paras.Add("@anhdaidien", ns.Anhdaidien);
+            paras.Add("@gioitinh", ns.Gioitinh);
+            paras.Add("@taikhoan", ns.Taikhoan);
+            paras.Add("@matkhau", ns.Matkhau);
+            paras.Add("@quanly", ns.Quanly);
+
+            return DBConnect.Instance.InsertUpdateDelete(query, paras);
+        }
+
+        public bool updateNhanSu (NhanSu ns)
+        {
+            string query = " update NhanSu ";
+            query += " set ten = @ten, ngaysinh = @ngaysinh, anhdaidien = @anhdaidien,  ";
+            query += " gioitinh = @gioitinh, taikhoan = @taikhoan, matkhau = @matkhau, quanly = @quanly ";
+            query += " where id = @ma";
+
+            Dictionary<string, object> paras = new Dictionary<string, object>();
+            paras.Add("@ma", ns.Ma);
+            paras.Add("@ten", ns.Hoten);
+            paras.Add("@ngaysinh", ns.Ngaysinh);
+            paras.Add("@anhdaidien", ns.Anhdaidien);
+            paras.Add("@gioitinh", ns.Gioitinh);
+            paras.Add("@taikhoan", ns.Taikhoan);
+            paras.Add("@matkhau", ns.Matkhau);
+            paras.Add("@quanly", ns.Quanly);
+
+            return DBConnect.Instance.InsertUpdateDelete(query, paras);
+        }
+
+        //public DataTable searchNhanSu(string ns)
+        //{
+        //    string query = " select * from NhanSu ";
+        //    query += " where id = @id ";
+        //    query += " ";
+
+        //    Dictionary<string, object> para = new Dictionary<string, object>();
+        //    para.Add("@id", int.Parse(ns));
+        //}
+
+        public bool deleteNhanSu (string id)
+        {
+            string query = " delete NhanSu ";
+            query += " where id = @id";
+
+            Dictionary<string, object> para = new Dictionary<string, object>();
+            para.Add("@id", id);
+
+            return DBConnect.Instance.InsertUpdateDelete(query, para);
+        }
         public DataTable getAllNhanSu ()
         {
             string query = "select * from NhanSu";

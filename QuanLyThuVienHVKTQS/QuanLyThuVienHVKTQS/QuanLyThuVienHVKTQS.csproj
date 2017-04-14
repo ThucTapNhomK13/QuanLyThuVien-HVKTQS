@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -82,11 +83,11 @@
     <Compile Include="fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="fNhanSu.cs">
+    <Compile Include="fPersonnel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fNhanSu.Designer.cs">
-      <DependentUpon>fNhanSu.cs</DependentUpon>
+    <Compile Include="fPersonnel.Designer.cs">
+      <DependentUpon>fPersonnel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPersonnel.resx">
+      <DependentUpon>fPersonnel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -146,12 +150,14 @@
     <None Include="Anh\file-bookmark128.png" />
     <Content Include="Anh\HoaDinh.jpg" />
     <Content Include="Anh\HoaNguyen.jpg" />
+    <Content Include="Anh\HungCuong.jpg" />
     <Content Include="Anh\identity128.png" />
     <Content Include="Anh\KhoChua.png" />
     <Content Include="Anh\KhoChua128.png" />
     <Content Include="Anh\LeMinh.jpg" />
     <Content Include="Anh\Loaisach.png" />
     <Content Include="Anh\loaisach128.png" />
+    <Content Include="Anh\Person.png" />
     <Content Include="Anh\SonHa.jpg" />
     <Content Include="Anh\thethuvien.png" />
     <Content Include="Anh\Thien.jpg" />

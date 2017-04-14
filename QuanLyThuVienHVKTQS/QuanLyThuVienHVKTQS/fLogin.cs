@@ -15,10 +15,6 @@ namespace QuanLyThuVienHVKTQS
     public partial class fLogin : Form
     {
 
-        private bool mv;
-        private int x;
-        private int y;
-
         public fLogin()
         {
             InitializeComponent();
@@ -28,32 +24,51 @@ namespace QuanLyThuVienHVKTQS
         {
             this.Close();
         }
-
+        private void CloseAction()
+        {
+            this.Close();
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (NhanSuBUL.Instance.checkTaiKhoan(txtUser.Text, txtPass.Text))
             {
-                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                using (fMain frmMain = new fMain())
-                {
-                    
-                    this.Hide();
-                    frmMain.Ns = NhanSuBUL.Instance.TaiKhoan(txtUser.Text, txtPass.Text);
-                    frmMain.ShowDialog();
-                    this.txtUser.Clear();
-                    this.txtPass.Clear();
-                }
+                fMain frm = new fMain();
+                //frm.Nhansu = NhanSuBUL.Instance.TaiKhoan(txtUser.Text, txtPass.Text);
+                Session.User = NhanSuBUL.Instance.TaiKhoan(txtUser.Text, txtPass.Text);
+                Session.UserRole = "USER";
                 
-                this.Show();
+                this.Hide();
+
+                frm.closeForm += CloseAction;
+                frm.Show();
             }
-            else
-            {
-                MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //if (NhanSuBUL.Instance.checkTaiKhoan(txtUser.Text, txtPass.Text))
+            //{
+            //    MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    //this.Hide();
+            //    fMain frmMain = new fMain();
+                 
+            //        frmMain.Nhansu = NhanSuBUL.Instance.TaiKhoan(txtUser.Text, txtPass.Text);
+            //        frmMain.closeForm += CloseAction;
+            //        frmMain.Show();
+            //        this.txtUser.Clear();
+            //        this.txtPass.Clear();
+                
+            //    //this.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
                
             
         }
 
+        #region Move Form
+
+        private bool mv;
+        private int x;
+        private int y;
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             mv = true;
@@ -71,5 +86,7 @@ namespace QuanLyThuVienHVKTQS
             if (mv)
                 SetDesktopLocation(Cursor.Position.X - x, Cursor.Position.Y - y);
         }
+
+        #endregion
     }
 }
