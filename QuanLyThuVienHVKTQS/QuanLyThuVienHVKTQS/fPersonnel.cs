@@ -176,5 +176,23 @@ namespace QuanLyThuVienHVKTQS
                     picNV.Image = new Bitmap(Application.StartupPath + "\\Anh\\" + anh);
             }
         }
+
+        private void btnThemMoi_Click(object sender, EventArgs e)
+        {
+            using (fBook frm = new fBook())
+            {
+                frm.ShowDialog();
+            }    
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

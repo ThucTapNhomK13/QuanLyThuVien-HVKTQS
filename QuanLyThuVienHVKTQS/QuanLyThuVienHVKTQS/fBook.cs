@@ -16,5 +16,12 @@ namespace QuanLyThuVienHVKTQS
         {
             InitializeComponent();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogresult = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo!", MessageBoxButtons.YesNo);
+            if(dialogresult==DialogResult.Yes)
+                this.Close();
+        }
     }
 }

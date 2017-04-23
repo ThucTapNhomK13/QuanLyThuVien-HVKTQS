@@ -91,6 +91,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fBook.resx">
+      <DependentUpon>fBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fCard.resx">
       <DependentUpon>fCard.cs</DependentUpon>
     </EmbeddedResource>

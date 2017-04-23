@@ -145,7 +145,7 @@ namespace QuanLyThuVienHVKTQS
             this.Show();
         }
 
-        private void ImenuQuanLyNhanSu_Click(object sender, EventArgs e)
+        private void ImenuManager_Click(object sender, EventArgs e)
         {
             //PhanQuyen();
             //if (_quyen)
@@ -170,11 +170,6 @@ namespace QuanLyThuVienHVKTQS
                 frmNhanSu.ShowDialog();
             }
             this.Show();
-
-        }
-
-        private void btnKho_Click(object sender, EventArgs e)
-        {
 
         }
 
