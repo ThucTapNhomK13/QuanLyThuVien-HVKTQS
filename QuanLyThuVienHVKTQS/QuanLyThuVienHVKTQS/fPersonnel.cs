@@ -53,6 +53,10 @@ namespace QuanLyThuVienHVKTQS
 
         private void SetNhanSu()
         {
+            int selectIndex = dgvDSNV.SelectedRows[0].Index;
+            int id = int.Parse(dgvDSNV[0, selectIndex].Value.ToString());
+            Nhansu.Ma = id;
+
             Nhansu.Hoten = txtHoTenNV.Text;
             Nhansu.Ngaysinh = DateTime.Parse(dtpNSNV.Text);
 
@@ -69,8 +73,11 @@ namespace QuanLyThuVienHVKTQS
             Nhansu.Taikhoan = txtTKNV.Text;
             Nhansu.Matkhau = txtMKNV.Text;
 
-            //string[] urlAvata = picAvata.ImageLocation.Split('\\');
-            //MessageBox.Show(picAvata.ImageLocation.ToString());
+            //int selectIndex = dgvDSNV.SelectedRows[0].Index;
+            //string anh = dgvDSNV["clAnh", selectIndex].Value.ToString();
+            //if (!string.IsNullOrEmpty(anh) && anh != " ")
+            //    picNV.Image = new Bitmap(Application.StartupPath + "\\Anh\\" + anh);
+
         }
 
         private void LoadNhanSu()
@@ -177,22 +184,10 @@ namespace QuanLyThuVienHVKTQS
             }
         }
 
-        private void btnThemMoi_Click(object sender, EventArgs e)
+        private void btnTKNhanVien_Click(object sender, EventArgs e)
         {
-            using (fBook frm = new fBook())
-            {
-                frm.ShowDialog();
-            }    
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-
+            
+            dgvDSNV.DataSource = NhanSuBUL.Instance.getByIdNS(txtTKNhanVien.Text);
         }
     }
 }

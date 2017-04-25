@@ -36,32 +36,12 @@ namespace QuanLyThuVienHVKTQS
                 //frm.Nhansu = NhanSuBUL.Instance.TaiKhoan(txtUser.Text, txtPass.Text);
                 Session.User = NhanSuBUL.Instance.TaiKhoan(txtUser.Text, txtPass.Text);
                 Session.UserRole = "USER";
-
+                
                 this.Hide();
 
                 frm.closeForm += CloseAction;
                 frm.Show();
             }
-            //if (NhanSuBUL.Instance.checkTaiKhoan(txtUser.Text, txtPass.Text))
-            //{
-            //    MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    //this.Hide();
-            //    fMain frmMain = new fMain();
-
-            //        frmMain.Nhansu = NhanSuBUL.Instance.TaiKhoan(txtUser.Text, txtPass.Text);
-            //        frmMain.closeForm += CloseAction;
-            //        frmMain.Show();
-            //        this.txtUser.Clear();
-            //        this.txtPass.Clear();
-
-            //    //this.Show();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
-
         }
 
         #region Move Form
@@ -88,15 +68,5 @@ namespace QuanLyThuVienHVKTQS
         }
 
         #endregion
-
-        private void txtUser_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void txtPass_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
     }
 }

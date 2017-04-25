@@ -13,8 +13,8 @@ namespace DTO
     {
         private int _ma;
         private int _soluong;
-        private int _noibo;
-        private int _machude;
+        private string _idkho;
+        private string _tenloaisach;
 
         public int Ma
         {
@@ -42,29 +42,29 @@ namespace DTO
             }
         }
 
-        public int Noibo
+        public string Idkho
         {
             get
             {
-                return _noibo;
+                return _idkho;
             }
 
             set
             {
-                _noibo = value;
+                _idkho = value;
             }
         }
 
-        public int Machude
+        public string Tenloaisach
         {
             get
             {
-                return _machude;
+                return _tenloaisach;
             }
 
             set
             {
-                _machude = value;
+                _tenloaisach = value;
             }
         }
 
@@ -74,8 +74,10 @@ namespace DTO
         {
             Ma = int.Parse(dr["id"].ToString());
             Soluong = int.Parse(dr["soluong"].ToString());
-            Noibo = int.Parse(dr["noibo"].ToString());
-            Machude = int.Parse(dr["idchude"].ToString());
+            Idkho = dr["idkho"].ToString();
+            Tenloaisach = dr["loaisach"].ToString();
         }
+
+
     }
 }

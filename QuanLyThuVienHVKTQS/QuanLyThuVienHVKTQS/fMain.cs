@@ -18,36 +18,9 @@ namespace QuanLyThuVienHVKTQS
         public delegate void closeFormHandle();
         public closeFormHandle closeForm;
 
+        List<LoaiSach> lsLoaiSach = LoaiSachBUL.Instance.ListLoaiSach();
+        Sach book = new Sach();
 
-        //private NhanSu _nhansu;
-
-        //private bool _quyen = false;
-
-        //public bool Quyen
-        //{
-        //    get
-        //    {
-        //        return _quyen;
-        //    }
-
-        //    set
-        //    {
-        //        _quyen = value;
-        //    }
-        //}
-
-        //public NhanSu Nhansu
-        //{
-        //    private get
-        //    {
-        //        return _nhansu;
-        //    }
-
-        //    set
-        //    {
-        //        _nhansu = value;
-        //    }
-        //}
 
         public fMain()
         {
@@ -55,17 +28,27 @@ namespace QuanLyThuVienHVKTQS
             
         }
 
-        //private void PhanQuyen ()
-        //{
-        //    if (int.Parse(Nhansu.Quanly.ToString()) == 1)
-        //    {
-        //        ImenuQuanLyNhanSu.Enabled = true;
-        //        _quyen = true;
-        //    }
-        //    else
-        //        ImenuQuanLyNhanSu.Enabled = false;
-        //}
+        
+        private void LoadSach ()
+        {
+            dgvSach.DataSource = SachBUL.Instance.getAllSach();
+            //dgvSach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            LoadLoaiSach(cmbLoaiSach);
+        }
 
+        private void LoadLoaiSach (ComboBox cmb)
+        {
+            cmb.DataSource = lsLoaiSach;
+            cmb.DisplayMember = "Tenloaisach";
+            cmb.ValueMember = "Ma";
+        }
+
+        //private void getById (int id)
+        //{
+        //    var ls = (from n in lsLoaiSach where n.Ma == id select n).ToList();
+        //    cmbLoaiSach.DataSource = ls;
+        //    cmbLoaiSach.DisplayMember = "Tenloaisach";
+        //}
 
         private void fMain_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -78,86 +61,23 @@ namespace QuanLyThuVienHVKTQS
 
         private void fMain_Load(object sender, EventArgs e)
         {
+
+            LoadSach();
             
-            //PhanQuyen();
             
         }
-
-        private void ImenuDangXuat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void ImenuThongTinTK_Click(object sender, EventArgs e)
         {
             
             using (fInformationUser frmInfoUser = new fInformationUser())
             {
-                //frmInfoUser.Nhansu = Nhansu;
                 frmInfoUser.Nhansu = Session.User;
                 frmInfoUser.ShowDialog();
             }
             
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
+        private void ImenuQuanLyNhanSu_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void btnSach_Click(object sender, EventArgs e)
-        {
-            //if (!Session.AllowUse("ADMIN,USER")) return;
-            
-            this.Hide();
-            using (fBook frmBook = new fBook())
-            {
-                frmBook.ShowDialog();
-            }
-            this.Show();
-        }
-
-        private void btnThe_Click(object sender, EventArgs e)
-        {
-            if (!Session.AllowUse("ADMIN"))
-            {
-                MessageBox.Show("Bạn không có quyền truy cập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            this.Hide();
-            using (fCard frmCard = new fCard())
-            {
-                frmCard.ShowDialog();
-            }
-            this.Show();
-        }
-
-        private void btnMuonTra_Click(object sender, EventArgs e)
-        {
-            //if (!Session.AllowUse("USER")) return;
-
-            this.Hide();
-            using (fLoanPayment frmLP = new fLoanPayment())
-            {
-                frmLP.ShowDialog();
-            }
-            this.Show();
-        }
-
-        private void ImenuManager_Click(object sender, EventArgs e)
-        {
-            //PhanQuyen();
-            //if (_quyen)
-            //{
-            //    this.Hide();
-            //    using (fPersonnel frmNhanSu = new fPersonnel())
-            //    {
-            //        frmNhanSu.ShowDialog();
-            //    }
-            //    this.Show();
-            //}
-
             if (!Session.AllowUse("USER"))
             {
                 MessageBox.Show("Bạn không có quyền truy cập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -172,92 +92,129 @@ namespace QuanLyThuVienHVKTQS
             this.Show();
 
         }
-
-        private void btnMuonTra_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTheThuVien_Click(object sender, EventArgs e)
-        {
-            if (!Session.AllowUse("USER"))
-            {
-                MessageBox.Show("Bạn không có quyền truy cập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            this.Hide();
-            using (fCard frmCard = new fCard())
-            {
-                frmCard.ShowDialog();
-            }
-            this.Show();
-
-        }
-
         private void ImenuThanhVien_Click(object sender, EventArgs e)
         {
 
         }
-
         private void ImenuHelp_Click(object sender, EventArgs e)
         {
 
         }
-
         private void ImenuVersion_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void btnMin_Click(object sender, EventArgs e)
+        private Sach SetSach (Sach book)
         {
-            WindowState = FormWindowState.Minimized;
+           
+            
+            book.Masach = txtMa.Text;
+            book.Tensach = txtTen.Text;
+            book.Tacgia = txtTacGia.Text;
+            book.Gioithieu = txtGioiThieu.Text;
+
+            bool noibo = ckbNoiBo.Checked;
+            book.Noibo = (noibo) ? 1 : 0;
+
+            book.Trangthai = cmbTinhTrang.Text;
+            book.Maloaisach = (cmbLoaiSach.SelectedItem as LoaiSach).Ma;
+
+            return book;
         }
-
-        #region Move Form
-
-        private bool _move = false;
-        private int _x, _y;
-
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            _move = false;
+            
+            if (SachBUL.Instance.InsertSach(SetSach(book)))
+            {
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadSach();
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void btnTKSach_Click(object sender, EventArgs e)
         {
-            _move = true;
-            _x = e.X;
-            _y = e.Y;
+            dgvSach.DataSource = SachBUL.Instance.getByIdSach(txtTKSach.Text);
         }
-
-        private void fMain_MouseMove(object sender, MouseEventArgs e)
+        private void ImenuMuonTra_Click(object sender, EventArgs e)
         {
-            if (_move)
-                SetDesktopLocation(Cursor.Position.X - _x, Cursor.Position.Y - _y);
+            this.Hide();
+            using (fMuonTraSach frmMTS = new fMuonTraSach())
+            {
+               
+                frmMTS.ShowDialog();
+            }
+            this.Show();
         }
-
-        private void fMain_MouseUp(object sender, MouseEventArgs e)
+        private void ImenuHome_Click(object sender, EventArgs e)
         {
-            _move = false;
+            LoadSach();
         }
-
-        private void fMain_MouseDown(object sender, MouseEventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
-            _move = true;
-            _x = e.X;
-            _y = e.Y;
+            int selectIndex = dgvSach.SelectedRows[0].Index;
+            int id = int.Parse(dgvSach["clId", selectIndex].Value.ToString());
+
+            if (SachBUL.Instance.Delete(id))
+            {
+                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadSach();
+
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
-
-        
-
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        private void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (_move)
-                SetDesktopLocation(Cursor.Position.X - _x, Cursor.Position.Y - _y);
-        }
+            int selectIndex = dgvSach.SelectedRows[0].Index;
 
-        #endregion
+            txtMa.Text = dgvSach["clMaSach", selectIndex].Value.ToString();
+            txtTen.Text = dgvSach["clTen", selectIndex].Value.ToString();
+            txtTacGia.Text = dgvSach["clTacGia", selectIndex].Value.ToString();
+
+            int noibo = int.Parse(dgvSach["clNoiBo", selectIndex].Value.ToString());
+            if (noibo == 1)
+                ckbNoiBo.Checked = true;
+            else
+                ckbNoiBo.Checked = false;
+
+            txtGioiThieu.Text = dgvSach["clGioiThieu", selectIndex].Value.ToString();
+
+            int loaisach = int.Parse(dgvSach["clLoaiSach", selectIndex].Value.ToString());
+            //if (cmbLoaiSach.ValueMember == loaisach.ToString())
+            //    cmbLoaiSach.DisplayMember = cmbLoaiSach.SelectedItem[loaisach]
+            //getById(loaisach);
+        }
+        private void btnSau_Click(object sender, EventArgs e)
+        {
+            int selectIndex = dgvSach.SelectedRows[0].Index;
+            book.Ma = int.Parse(dgvSach["clId", selectIndex].Value.ToString());
+
+            if (SachBUL.Instance.UpdateSach(SetSach(book)))
+            {
+                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadSach();
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+        private void btnNhapLai_Click(object sender, EventArgs e)
+        {
+            txtGioiThieu.Clear();
+            txtMa.Clear();
+            txtTen.Clear();
+            txtTacGia.Clear();
+
+            LoadLoaiSach(cmbLoaiSach);
+        }
     }
 }
