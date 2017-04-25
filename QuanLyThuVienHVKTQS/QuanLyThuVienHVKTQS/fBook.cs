@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,18 @@ namespace QuanLyThuVienHVKTQS
             InitializeComponent();
         }
 
+        public void LoadSach(Sach book)
+        {
+            txtTenSach.Text = book.Tensach;
+            txtTacGia.Text = book.Tacgia;
+            txtGioiThieu.Text = book.Gioithieu;
+            txtNoiBo.Text = book.Noibo;
+            txtSoLuong.Text = book.Soluong.ToString();
+        }
+
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            DialogResult dialogresult = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo!", MessageBoxButtons.YesNo);
+            DialogResult dialogresult = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(dialogresult==DialogResult.Yes)
                 this.Close();
         }

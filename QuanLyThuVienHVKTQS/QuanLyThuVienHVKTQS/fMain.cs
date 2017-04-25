@@ -69,7 +69,7 @@ namespace QuanLyThuVienHVKTQS
 
         private void fMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show("Bạn muốn thoát khỏi chương trình ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            MessageBox.Show("Bạn muốn thoát khỏi chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (closeForm != null)
             {
                 closeForm();

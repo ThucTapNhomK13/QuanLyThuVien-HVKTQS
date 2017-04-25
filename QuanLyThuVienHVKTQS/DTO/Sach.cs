@@ -11,20 +11,25 @@ namespace DTO
 {
     public class Sach
     {
-        private int _ma;
+        private int _id;
+        private int _idloaisach;
         private string _tensach;
-        private int _maloaisach;
+        private string _tacgia;
+        private string _gioithieu;
+        private string _noibo;
+        private int _soluong;
+        private string _trangthai;
 
         public int Ma
         {
             get
             {
-                return _ma;
+                return _id;
             }
 
             set
             {
-                _ma = value;
+                _id = value;
             }
         }
 
@@ -45,24 +50,92 @@ namespace DTO
         {
             get
             {
-                return _maloaisach;
+                return _idloaisach;
             }
 
             set
             {
-                _maloaisach = value;
+                _idloaisach = value;
+            }
+        }
+
+        public string Tacgia
+        {
+            get
+            {
+                return _tacgia;
+            }
+
+            set
+            {
+                _tacgia = value;
+            }
+        }
+
+        public string Gioithieu
+        {
+            get
+            {
+                return _gioithieu;
+            }
+
+            set
+            {
+                _gioithieu = value;
+            }
+        }
+
+        public string Trangthai
+        {
+            get
+            {
+                return _trangthai;
+            }
+
+            set
+            {
+                _trangthai = value;
+            }
+        }
+
+        public string Noibo
+        {
+            get
+            {
+                return _noibo;
+            }
+
+            set
+            {
+                _noibo = value;
+            }
+        }
+
+        public int Soluong
+        {
+            get
+            {
+                return _soluong;
+            }
+
+            set
+            {
+                _soluong = value;
             }
         }
 
         public Sach() { }
 
-        public Sach (DataRow dr)
+        public Sach GetSach(DataRow dr)
         {
-            Ma = int.Parse(dr["id"].ToString());
-            Tensach = dr["tensach"].ToString();
-            Maloaisach = int.Parse( dr["idloaisach"].ToString());
+            Sach book = new Sach();
+            book.Ma = int.Parse(dr["id"].ToString());
+            book.Maloaisach = int.Parse(dr["idloaisach"].ToString());
+            book.Tensach = dr["tensach"].ToString();
+            book.Tacgia = dr["tacgia"].ToString();
+            book.Gioithieu = dr["gioithieu"].ToString();
+
+            return book;
         }
-
-
     }
 }

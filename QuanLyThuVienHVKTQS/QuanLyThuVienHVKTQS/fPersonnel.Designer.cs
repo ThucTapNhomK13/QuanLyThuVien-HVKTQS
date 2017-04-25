@@ -66,19 +66,11 @@
             this.clMatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clQuanLy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clAnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabQuanLi = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
             this.panKhoSach = new System.Windows.Forms.Panel();
             this.dgvKhoSach = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idloaisach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tensach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noibo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.masach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tacgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioithieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThemMoi = new System.Windows.Forms.Button();
@@ -105,13 +97,22 @@
             this.clngaytra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnguoimuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idloaisach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tensach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noibo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.masach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tacgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioithieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmtDGV.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picNV)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.tabQuanLi.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panKhoSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoSach)).BeginInit();
@@ -501,17 +502,18 @@
             this.clAnh.ReadOnly = true;
             this.clAnh.Visible = false;
             // 
-            // tabControl1
+            // tabQuanLi
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1004, 556);
-            this.tabControl1.TabIndex = 3;
+            this.tabQuanLi.Controls.Add(this.tabPage1);
+            this.tabQuanLi.Controls.Add(this.tabPage2);
+            this.tabQuanLi.Controls.Add(this.tabPage3);
+            this.tabQuanLi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabQuanLi.Location = new System.Drawing.Point(0, 0);
+            this.tabQuanLi.Name = "tabQuanLi";
+            this.tabQuanLi.SelectedIndex = 0;
+            this.tabQuanLi.Size = new System.Drawing.Size(1004, 556);
+            this.tabQuanLi.TabIndex = 3;
+            this.tabQuanLi.SelectedIndexChanged += new System.EventHandler(this.tabQuanLi_SelectedIndexChanged);
             // 
             // tabPage2
             // 
@@ -548,6 +550,10 @@
             // 
             // dgvKhoSach
             // 
+            this.dgvKhoSach.AllowUserToAddRows = false;
+            this.dgvKhoSach.AllowUserToDeleteRows = false;
+            this.dgvKhoSach.AllowUserToResizeColumns = false;
+            this.dgvKhoSach.AllowUserToResizeRows = false;
             this.dgvKhoSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhoSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -557,65 +563,15 @@
             this.masach,
             this.tacgia,
             this.gioithieu,
+            this.soluong,
             this.trangthai});
             this.dgvKhoSach.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvKhoSach.Location = new System.Drawing.Point(0, 21);
             this.dgvKhoSach.Name = "dgvKhoSach";
             this.dgvKhoSach.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvKhoSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKhoSach.Size = new System.Drawing.Size(791, 432);
             this.dgvKhoSach.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // idloaisach
-            // 
-            this.idloaisach.DataPropertyName = "idloaisach";
-            this.idloaisach.HeaderText = "idloaisach";
-            this.idloaisach.Name = "idloaisach";
-            this.idloaisach.Visible = false;
-            // 
-            // tensach
-            // 
-            this.tensach.DataPropertyName = "tensach";
-            this.tensach.HeaderText = "Tên sách";
-            this.tensach.Name = "tensach";
-            this.tensach.Width = 200;
-            // 
-            // noibo
-            // 
-            this.noibo.DataPropertyName = "noibo";
-            this.noibo.HeaderText = "Nội bộ";
-            this.noibo.Name = "noibo";
-            // 
-            // masach
-            // 
-            this.masach.DataPropertyName = "masach";
-            this.masach.HeaderText = "Mã sách";
-            this.masach.Name = "masach";
-            // 
-            // tacgia
-            // 
-            this.tacgia.DataPropertyName = "tacgia";
-            this.tacgia.HeaderText = "Tác giả";
-            this.tacgia.Name = "tacgia";
-            // 
-            // gioithieu
-            // 
-            this.gioithieu.DataPropertyName = "gioithieu";
-            this.gioithieu.HeaderText = "Giới thiệu";
-            this.gioithieu.Name = "gioithieu";
-            this.gioithieu.Width = 150;
-            // 
-            // trangthai
-            // 
-            this.trangthai.DataPropertyName = "trangthai";
-            this.trangthai.HeaderText = "Trạng thái";
-            this.trangthai.Name = "trangthai";
             // 
             // btnSua
             // 
@@ -624,7 +580,7 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(144, 59);
             this.btnSua.TabIndex = 11;
-            this.btnSua.Text = "Sửa thông tin sách";
+            this.btnSua.Text = "Sửa thông tin";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -646,7 +602,7 @@
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(144, 59);
             this.btnThemMoi.TabIndex = 9;
-            this.btnThemMoi.Text = "Thêm sách mới";
+            this.btnThemMoi.Text = "Thêm tựa sách";
             this.btnThemMoi.UseVisualStyleBackColor = true;
             this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
@@ -872,17 +828,76 @@
             this.clnguoimuon.Name = "clnguoimuon";
             this.clnguoimuon.ReadOnly = true;
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // idloaisach
+            // 
+            this.idloaisach.DataPropertyName = "idloaisach";
+            this.idloaisach.HeaderText = "idloaisach";
+            this.idloaisach.Name = "idloaisach";
+            this.idloaisach.Visible = false;
+            // 
+            // tensach
+            // 
+            this.tensach.DataPropertyName = "tensach";
+            this.tensach.HeaderText = "Tên sách";
+            this.tensach.Name = "tensach";
+            this.tensach.Width = 200;
+            // 
+            // noibo
+            // 
+            this.noibo.DataPropertyName = "noibo";
+            this.noibo.HeaderText = "Nội bộ";
+            this.noibo.Name = "noibo";
+            // 
+            // masach
+            // 
+            this.masach.DataPropertyName = "masach";
+            this.masach.HeaderText = "Mã sách";
+            this.masach.Name = "masach";
+            this.masach.Visible = false;
+            // 
+            // tacgia
+            // 
+            this.tacgia.DataPropertyName = "tacgia";
+            this.tacgia.HeaderText = "Tác giả";
+            this.tacgia.Name = "tacgia";
+            // 
+            // gioithieu
+            // 
+            this.gioithieu.DataPropertyName = "gioithieu";
+            this.gioithieu.HeaderText = "Giới thiệu";
+            this.gioithieu.Name = "gioithieu";
+            this.gioithieu.Width = 150;
+            // 
+            // soluong
+            // 
+            this.soluong.DataPropertyName = "soluong";
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
+            // 
+            // trangthai
+            // 
+            this.trangthai.DataPropertyName = "trangthai";
+            this.trangthai.HeaderText = "Trạng thái";
+            this.trangthai.Name = "trangthai";
+            // 
             // fPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1004, 556);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabQuanLi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "fPersonnel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fNhanSu";
+            this.Text = "Quản lí thư viện";
             this.Load += new System.EventHandler(this.fPersonnel_Load);
             this.cmtDGV.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -892,7 +907,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.tabQuanLi.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panKhoSach.ResumeLayout(false);
@@ -914,7 +929,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabQuanLi;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button btnXoaNV;
@@ -973,6 +988,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panKhoSach;
         private System.Windows.Forms.DataGridView dgvKhoSach;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnThemMoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn idloaisach;
         private System.Windows.Forms.DataGridViewTextBoxColumn tensach;
@@ -980,9 +998,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn masach;
         private System.Windows.Forms.DataGridViewTextBoxColumn tacgia;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioithieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
         private System.Windows.Forms.DataGridViewTextBoxColumn trangthai;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnThemMoi;
     }
 }
