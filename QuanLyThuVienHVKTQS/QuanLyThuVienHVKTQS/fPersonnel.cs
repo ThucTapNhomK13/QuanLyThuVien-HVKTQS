@@ -189,7 +189,9 @@ namespace QuanLyThuVienHVKTQS
         {
             using (fBook frm = new fBook())
             {
+                frm.IsThemMoi = true;
                 frm.ShowDialog();
+                LoadKhoSach();
             }
         }
 
@@ -239,12 +241,11 @@ namespace QuanLyThuVienHVKTQS
                     book.Tensach = dgr.Cells["tensach"].Value.ToString();
                     book.Tacgia = dgr.Cells["tacgia"].Value.ToString();
                     book.Gioithieu = dgr.Cells["gioithieu"].Value.ToString();
-                    book.Noibo = dgr.Cells["noibo"].Value.ToString();
-                    book.Soluong = int.Parse(dgr.Cells["soluong"].Value.ToString());
-                    book.Trangthai = dgr.Cells["trangthai"].Value.ToString();
                     fBook frmBook = new fBook();
                     frmBook.LoadSach(book);
+                    frmBook.Ma = book.Ma;
                     frmBook.ShowDialog();
+                    LoadKhoSach();
                 }
             }
         }

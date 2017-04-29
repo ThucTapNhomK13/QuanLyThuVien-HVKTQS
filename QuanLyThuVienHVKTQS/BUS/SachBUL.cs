@@ -15,12 +15,12 @@ namespace BUL
         public bool insertSach(Sach book)
         {
             string query = " insert into Sach ";
-            query += " (id, idloaisach, tacgia, gioithieu) ";
-            query += " values (@id, @idloaisach, @tacgia, @gioithieu) ";
+            query += " (idloaisach, tensach, tacgia, gioithieu) ";
+            query += " values (@idloaisach, @tensach, @tacgia, @gioithieu) ";
 
             Dictionary<string, object> paras = new Dictionary<string, object>();
-            paras.Add("@id", book.Ma);
             paras.Add("@idloaisach", book.Maloaisach);
+            paras.Add("@tensach", book.Tensach);
             paras.Add("@tacgia", book.Tacgia);
             paras.Add("@gioithieu", book.Gioithieu);
 
@@ -30,8 +30,7 @@ namespace BUL
         public bool updateSach(Sach book)
         {
             string query = " update Sach ";
-            query += " set tensach = @tensach, tacgia = @tacgia, gioithieu = @gioithieu,  ";
-            query += " trangthai = @trangthai ";
+            query += " set tensach = @tensach, tacgia = @tacgia, gioithieu = @gioithieu ";
             query += " where id = @ma";
 
             Dictionary<string, object> paras = new Dictionary<string, object>();
@@ -39,7 +38,6 @@ namespace BUL
             paras.Add("@tensach", book.Tensach);
             paras.Add("@tacgia", book.Tacgia);
             paras.Add("@gioithieu", book.Gioithieu);
-            paras.Add("@trangthai", book.Trangthai);
 
             return DBConnect.Instance.InsertUpdateDelete(query, paras);
         }
@@ -59,6 +57,12 @@ namespace BUL
         {
             string query = "select s.id, s.idloaisach, s.tensach, s.noibo, s.masach, s.tacgia, s.gioithieu, l.soluong, s.trangthai from Sach s inner join LoaiSach l on s.idloaisach = l.id";
 
+            return DBConnect.Instance.Select(query, null);
+        }
+
+        public DataTable GetMaLoaiSach()
+        {
+            string query = "select l.id from LoaiSach l";
             return DBConnect.Instance.Select(query, null);
         }
     }

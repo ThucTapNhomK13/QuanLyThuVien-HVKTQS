@@ -30,20 +30,16 @@
         {
             this.lblTenSach = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.txtTrangThai = new System.Windows.Forms.TextBox();
-            this.txtNoiBo = new System.Windows.Forms.TextBox();
             this.txtGioiThieu = new System.Windows.Forms.TextBox();
             this.txtTacGia = new System.Windows.Forms.TextBox();
             this.txtTenSach = new System.Windows.Forms.TextBox();
-            this.lblTrangThai = new System.Windows.Forms.Label();
-            this.lblSoLuong = new System.Windows.Forms.Label();
-            this.lblNoiBo = new System.Windows.Forms.Label();
             this.lblGioiThieu = new System.Windows.Forms.Label();
             this.lblTacGia = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGhiNhan = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.lblMaLoaiSach = new System.Windows.Forms.Label();
+            this.cmbMaLoaiSach = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +47,7 @@
             // 
             this.lblTenSach.AutoSize = true;
             this.lblTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSach.Location = new System.Drawing.Point(25, 32);
+            this.lblTenSach.Location = new System.Drawing.Point(21, 74);
             this.lblTenSach.Name = "lblTenSach";
             this.lblTenSach.Size = new System.Drawing.Size(74, 20);
             this.lblTenSach.TabIndex = 0;
@@ -59,15 +55,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtSoLuong);
-            this.groupBox1.Controls.Add(this.txtTrangThai);
-            this.groupBox1.Controls.Add(this.txtNoiBo);
+            this.groupBox1.Controls.Add(this.cmbMaLoaiSach);
+            this.groupBox1.Controls.Add(this.lblMaLoaiSach);
             this.groupBox1.Controls.Add(this.txtGioiThieu);
             this.groupBox1.Controls.Add(this.txtTacGia);
             this.groupBox1.Controls.Add(this.txtTenSach);
-            this.groupBox1.Controls.Add(this.lblTrangThai);
-            this.groupBox1.Controls.Add(this.lblSoLuong);
-            this.groupBox1.Controls.Add(this.lblNoiBo);
             this.groupBox1.Controls.Add(this.lblGioiThieu);
             this.groupBox1.Controls.Add(this.lblTacGia);
             this.groupBox1.Controls.Add(this.lblTenSach);
@@ -77,78 +69,30 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Location = new System.Drawing.Point(115, 236);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(265, 20);
-            this.txtSoLuong.TabIndex = 11;
-            // 
-            // txtTrangThai
-            // 
-            this.txtTrangThai.Location = new System.Drawing.Point(115, 185);
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(265, 20);
-            this.txtTrangThai.TabIndex = 10;
-            // 
-            // txtNoiBo
-            // 
-            this.txtNoiBo.Location = new System.Drawing.Point(115, 134);
-            this.txtNoiBo.Name = "txtNoiBo";
-            this.txtNoiBo.Size = new System.Drawing.Size(265, 20);
-            this.txtNoiBo.TabIndex = 9;
-            // 
             // txtGioiThieu
             // 
+            this.txtGioiThieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGioiThieu.Location = new System.Drawing.Point(411, 50);
             this.txtGioiThieu.Multiline = true;
             this.txtGioiThieu.Name = "txtGioiThieu";
-            this.txtGioiThieu.Size = new System.Drawing.Size(286, 206);
+            this.txtGioiThieu.Size = new System.Drawing.Size(286, 204);
             this.txtGioiThieu.TabIndex = 8;
             // 
             // txtTacGia
             // 
-            this.txtTacGia.Location = new System.Drawing.Point(115, 83);
+            this.txtTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTacGia.Location = new System.Drawing.Point(124, 201);
             this.txtTacGia.Name = "txtTacGia";
-            this.txtTacGia.Size = new System.Drawing.Size(265, 20);
+            this.txtTacGia.Size = new System.Drawing.Size(265, 26);
             this.txtTacGia.TabIndex = 7;
             // 
             // txtTenSach
             // 
-            this.txtTenSach.Location = new System.Drawing.Point(115, 32);
+            this.txtTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSach.Location = new System.Drawing.Point(124, 71);
             this.txtTenSach.Name = "txtTenSach";
-            this.txtTenSach.Size = new System.Drawing.Size(265, 20);
+            this.txtTenSach.Size = new System.Drawing.Size(265, 26);
             this.txtTenSach.TabIndex = 6;
-            // 
-            // lblTrangThai
-            // 
-            this.lblTrangThai.AutoSize = true;
-            this.lblTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrangThai.Location = new System.Drawing.Point(25, 185);
-            this.lblTrangThai.Name = "lblTrangThai";
-            this.lblTrangThai.Size = new System.Drawing.Size(80, 20);
-            this.lblTrangThai.TabIndex = 5;
-            this.lblTrangThai.Text = "Trạng thái";
-            // 
-            // lblSoLuong
-            // 
-            this.lblSoLuong.AutoSize = true;
-            this.lblSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuong.Location = new System.Drawing.Point(25, 236);
-            this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(72, 20);
-            this.lblSoLuong.TabIndex = 4;
-            this.lblSoLuong.Text = "Số lượng";
-            // 
-            // lblNoiBo
-            // 
-            this.lblNoiBo.AutoSize = true;
-            this.lblNoiBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoiBo.Location = new System.Drawing.Point(25, 134);
-            this.lblNoiBo.Name = "lblNoiBo";
-            this.lblNoiBo.Size = new System.Drawing.Size(54, 20);
-            this.lblNoiBo.TabIndex = 3;
-            this.lblNoiBo.Text = "Nội bộ";
             // 
             // lblGioiThieu
             // 
@@ -164,7 +108,7 @@
             // 
             this.lblTacGia.AutoSize = true;
             this.lblTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTacGia.Location = new System.Drawing.Point(25, 83);
+            this.lblTacGia.Location = new System.Drawing.Point(21, 204);
             this.lblTacGia.Name = "lblTacGia";
             this.lblTacGia.Size = new System.Drawing.Size(60, 20);
             this.lblTacGia.TabIndex = 1;
@@ -189,6 +133,7 @@
             this.btnGhiNhan.TabIndex = 2;
             this.btnGhiNhan.Text = "Ghi nhận";
             this.btnGhiNhan.UseVisualStyleBackColor = true;
+            this.btnGhiNhan.Click += new System.EventHandler(this.btnGhiNhan_Click);
             // 
             // btnThoat
             // 
@@ -200,6 +145,25 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // lblMaLoaiSach
+            // 
+            this.lblMaLoaiSach.AutoSize = true;
+            this.lblMaLoaiSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaLoaiSach.Location = new System.Drawing.Point(21, 139);
+            this.lblMaLoaiSach.Name = "lblMaLoaiSach";
+            this.lblMaLoaiSach.Size = new System.Drawing.Size(97, 20);
+            this.lblMaLoaiSach.TabIndex = 9;
+            this.lblMaLoaiSach.Text = "Mã loại sách";
+            // 
+            // cmbMaLoaiSach
+            // 
+            this.cmbMaLoaiSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMaLoaiSach.FormattingEnabled = true;
+            this.cmbMaLoaiSach.Location = new System.Drawing.Point(124, 135);
+            this.cmbMaLoaiSach.Name = "cmbMaLoaiSach";
+            this.cmbMaLoaiSach.Size = new System.Drawing.Size(265, 28);
+            this.cmbMaLoaiSach.TabIndex = 10;
             // 
             // fBook
             // 
@@ -215,6 +179,7 @@
             this.Name = "fBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Quản lí thư viện";
+            this.Load += new System.EventHandler(this.fBook_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -226,19 +191,15 @@
 
         private System.Windows.Forms.Label lblTenSach;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblNoiBo;
         private System.Windows.Forms.Label lblGioiThieu;
         private System.Windows.Forms.Label lblTacGia;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.TextBox txtTrangThai;
-        private System.Windows.Forms.TextBox txtNoiBo;
         private System.Windows.Forms.TextBox txtGioiThieu;
         private System.Windows.Forms.TextBox txtTacGia;
         private System.Windows.Forms.TextBox txtTenSach;
-        private System.Windows.Forms.Label lblTrangThai;
-        private System.Windows.Forms.Label lblSoLuong;
         private System.Windows.Forms.Button btnGhiNhan;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Label lblMaLoaiSach;
+        private System.Windows.Forms.ComboBox cmbMaLoaiSach;
     }
 }

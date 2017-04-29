@@ -16,9 +16,6 @@ namespace DTO
         private string _tensach;
         private string _tacgia;
         private string _gioithieu;
-        private string _noibo;
-        private int _soluong;
-        private string _trangthai;
 
         public int Ma
         {
@@ -82,45 +79,6 @@ namespace DTO
             set
             {
                 _gioithieu = value;
-            }
-        }
-
-        public string Trangthai
-        {
-            get
-            {
-                return _trangthai;
-            }
-
-            set
-            {
-                _trangthai = value;
-            }
-        }
-
-        public string Noibo
-        {
-            get
-            {
-                return _noibo;
-            }
-
-            set
-            {
-                _noibo = value;
-            }
-        }
-
-        public int Soluong
-        {
-            get
-            {
-                return _soluong;
-            }
-
-            set
-            {
-                _soluong = value;
             }
         }
 
