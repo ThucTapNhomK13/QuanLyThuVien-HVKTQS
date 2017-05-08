@@ -52,7 +52,7 @@ namespace QuanLyThuVienHVKTQS
 
         private void fMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show("Bạn muốn thoát khỏi chương trình ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            MessageBox.Show("Bạn muốn thoát khỏi chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (closeForm != null)
             {
                 closeForm();
@@ -76,7 +76,57 @@ namespace QuanLyThuVienHVKTQS
             }
             
         }
+<<<<<<< HEAD
         private void ImenuQuanLyNhanSu_Click(object sender, EventArgs e)
+=======
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSach_Click(object sender, EventArgs e)
+        {
+            //if (!Session.AllowUse("ADMIN,USER")) return;
+            
+            this.Hide();
+            using (fBook frmBook = new fBook())
+            {
+                frmBook.ShowDialog();
+            }
+            this.Show();
+        }
+
+        private void btnThe_Click(object sender, EventArgs e)
+        {
+            if (!Session.AllowUse("ADMIN"))
+            {
+                MessageBox.Show("Bạn không có quyền truy cập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            this.Hide();
+            using (fCard frmCard = new fCard())
+            {
+                frmCard.ShowDialog();
+            }
+            this.Show();
+        }
+
+        private void btnMuonTra_Click(object sender, EventArgs e)
+        {
+            //if (!Session.AllowUse("USER")) return;
+
+            this.Hide();
+            using (fLoanPayment frmLP = new fLoanPayment())
+            {
+                frmLP.ShowDialog();
+            }
+            this.Show();
+        }
+
+        private void ImenuManager_Click(object sender, EventArgs e)
+>>>>>>> origin/master
         {
             if (!Session.AllowUse("USER"))
             {
@@ -92,6 +142,7 @@ namespace QuanLyThuVienHVKTQS
             this.Show();
 
         }
+<<<<<<< HEAD
         private void ImenuThanhVien_Click(object sender, EventArgs e)
         {
 
@@ -101,6 +152,10 @@ namespace QuanLyThuVienHVKTQS
 
         }
         private void ImenuVersion_Click(object sender, EventArgs e)
+=======
+
+        private void btnMuonTra_Click_1(object sender, EventArgs e)
+>>>>>>> origin/master
         {
 
         }
