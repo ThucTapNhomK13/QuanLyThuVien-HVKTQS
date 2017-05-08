@@ -18,6 +18,7 @@ namespace DTO
 
         private int _manhansu;
         private int _thethuvien;
+        private string _masach;
 
         public int Ma
         {
@@ -97,6 +98,19 @@ namespace DTO
             }
         }
 
+        public string Masach
+        {
+            get
+            {
+                return _masach;
+            }
+
+            set
+            {
+                _masach = value;
+            }
+        }
+
         public MuonTra() { }
 
         public MuonTra (DataRow dr)
@@ -114,6 +128,7 @@ namespace DTO
 
             Manhansu = int.Parse(dr["idnhansu"].ToString());
             Thethuvien = int.Parse(dr["idthethuvien"].ToString());
+            Masach = dr["idsach"].ToString();
         }
     }
 }

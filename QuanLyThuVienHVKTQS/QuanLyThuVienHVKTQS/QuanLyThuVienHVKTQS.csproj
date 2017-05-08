@@ -47,29 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fBook.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fBook.Designer.cs">
-      <DependentUpon>fBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fCard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fCard.Designer.cs">
-      <DependentUpon>fCard.cs</DependentUpon>
-    </Compile>
     <Compile Include="fInformationUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fInformationUser.Designer.cs">
       <DependentUpon>fInformationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fLoanPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fLoanPayment.Designer.cs">
-      <DependentUpon>fLoanPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -83,6 +65,12 @@
     <Compile Include="fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="fMuonTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMuonTraSach.Designer.cs">
+      <DependentUpon>fMuonTraSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="fPersonnel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,9 +79,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fCard.resx">
-      <DependentUpon>fCard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fInformationUser.resx">
       <DependentUpon>fInformationUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMuonTraSach.resx">
+      <DependentUpon>fMuonTraSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fPersonnel.resx">
       <DependentUpon>fPersonnel.cs</DependentUpon>
@@ -144,6 +132,7 @@
     <Content Include="Anh\AnhTuan.jpg" />
     <Content Include="Anh\book-48.png" />
     <Content Include="Anh\book128.png" />
+    <Content Include="FileQuerySQL\quanlythuvienHVKTQS.sql" />
     <None Include="Anh\credict_card128.png" />
     <Content Include="Anh\DungNguyen.jpg" />
     <None Include="Anh\exchange-icon128.png" />
@@ -162,7 +151,6 @@
     <Content Include="Anh\thethuvien.png" />
     <Content Include="Anh\Thien.jpg" />
     <Content Include="Anh\ThuyHuong.jpg" />
-    <Content Include="FileQuerySQL\quanlythuvienHVKTQS.sql" />
     <None Include="Resources\book128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

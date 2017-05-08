@@ -54,7 +54,7 @@ namespace BUL
         public bool updateNhanSu (NhanSu ns)
         {
             string query = " update NhanSu ";
-            query += " set ten = @ten, ngaysinh = @ngaysinh, anhdaidien = @anhdaidien,  ";
+            query += " set ten = @ten, ngaysinh = @ngaysinh,  ";
             query += " gioitinh = @gioitinh, taikhoan = @taikhoan, matkhau = @matkhau, quanly = @quanly ";
             query += " where id = @ma";
 
@@ -62,7 +62,6 @@ namespace BUL
             paras.Add("@ma", ns.Ma);
             paras.Add("@ten", ns.Hoten);
             paras.Add("@ngaysinh", ns.Ngaysinh);
-            paras.Add("@anhdaidien", ns.Anhdaidien);
             paras.Add("@gioitinh", ns.Gioitinh);
             paras.Add("@taikhoan", ns.Taikhoan);
             paras.Add("@matkhau", ns.Matkhau);
@@ -71,15 +70,7 @@ namespace BUL
             return DBConnect.Instance.InsertUpdateDelete(query, paras);
         }
 
-        //public DataTable searchNhanSu(string ns)
-        //{
-        //    string query = " select * from NhanSu ";
-        //    query += " where id = @id ";
-        //    query += " ";
-
-        //    Dictionary<string, object> para = new Dictionary<string, object>();
-        //    para.Add("@id", int.Parse(ns));
-        //}
+        
 
         public bool deleteNhanSu (string id)
         {
@@ -125,6 +116,17 @@ namespace BUL
             DataTable dt = DBConnect.Instance.Select(query, paras);
 
             return new NhanSu(dt.Rows[0]);
+        }
+
+        public DataTable getByIdNS (string ten)
+        {
+            string qury = "if (@ten like ' ') select * from NhanSu  ";
+            qury += " else select * from NhanSu where ten like '%'+@ten+'%' ";
+
+            Dictionary<string, object> paras = new Dictionary<string, object>();
+            paras.Add("@ten", ten);
+
+            return DBConnect.Instance.Select(qury, paras);
         }
     }
 }
