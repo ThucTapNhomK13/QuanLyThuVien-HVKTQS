@@ -19,8 +19,13 @@ namespace QuanLyThuVienHVKTQS
         public closeFormHandle closeForm;
 
         List<LoaiSach> lsLoaiSach = LoaiSachBUL.Instance.ListLoaiSach();
+<<<<<<< HEAD
 
 
+=======
+        Sach book = new Sach();
+
+>>>>>>> origin/master
 
         public fMain()
         {
@@ -52,7 +57,7 @@ namespace QuanLyThuVienHVKTQS
 
         private void fMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show("Bạn muốn thoát khỏi chương trình ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            MessageBox.Show("Bạn muốn thoát khỏi chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (closeForm != null)
             {
                 closeForm();
@@ -76,7 +81,32 @@ namespace QuanLyThuVienHVKTQS
             }
             
         }
+<<<<<<< HEAD
         private void ImenuQuanLyNhanSu_Click(object sender, EventArgs e)
+=======
+<<<<<<< HEAD
+        private void ImenuQuanLyNhanSu_Click(object sender, EventArgs e)
+=======
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSach_Click(object sender, EventArgs e)
+        {
+            //if (!Session.AllowUse("ADMIN,USER")) return;
+            
+            this.Hide();
+            using (fBook frmBook = new fBook())
+            {
+                frmBook.ShowDialog();
+            }
+            this.Show();
+        }
+
+        private void btnThe_Click(object sender, EventArgs e)
+>>>>>>> origin/master
         {
             if (!Session.AllowUse("USER"))
             {
@@ -103,6 +133,7 @@ namespace QuanLyThuVienHVKTQS
         private void ImenuVersion_Click(object sender, EventArgs e)
         {
 
+<<<<<<< HEAD
         }
         private Sach SetSach ()
         {
@@ -126,6 +157,68 @@ namespace QuanLyThuVienHVKTQS
         {
             
             if (SachBUL.Instance.InsertSach(SetSach()))
+=======
+        private void ImenuManager_Click(object sender, EventArgs e)
+>>>>>>> origin/master
+        {
+            if (!Session.AllowUse("USER"))
+>>>>>>> origin/master
+            {
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadSach();
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+<<<<<<< HEAD
+        private void btnTKSach_Click(object sender, EventArgs e)
+=======
+<<<<<<< HEAD
+        private void ImenuThanhVien_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ImenuHelp_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ImenuVersion_Click(object sender, EventArgs e)
+=======
+
+        private void btnMuonTra_Click_1(object sender, EventArgs e)
+>>>>>>> origin/master
+>>>>>>> origin/master
+        {
+            dgvSach.DataSource = SachBUL.Instance.getByIdSach(txtTKSach.Text);
+        }
+<<<<<<< HEAD
+        private void ImenuMuonTra_Click(object sender, EventArgs e)
+        {
+=======
+        private Sach SetSach (Sach book)
+        {
+           
+            
+            book.Masach = txtMa.Text;
+            book.Tensach = txtTen.Text;
+            book.Tacgia = txtTacGia.Text;
+            book.Gioithieu = txtGioiThieu.Text;
+
+            bool noibo = ckbNoiBo.Checked;
+            book.Noibo = (noibo) ? 1 : 0;
+
+            book.Trangthai = cmbTinhTrang.Text;
+            book.Maloaisach = (cmbLoaiSach.SelectedItem as LoaiSach).Ma;
+
+            return book;
+        }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            
+            if (SachBUL.Instance.InsertSach(SetSach(book)))
             {
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadSach();
@@ -142,6 +235,7 @@ namespace QuanLyThuVienHVKTQS
         }
         private void ImenuMuonTra_Click(object sender, EventArgs e)
         {
+>>>>>>> origin/master
             this.Hide();
             using (fMuonTraSach frmMTS = new fMuonTraSach())
             {
@@ -174,6 +268,7 @@ namespace QuanLyThuVienHVKTQS
         private void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int selectIndex = dgvSach.SelectedRows[0].Index;
+<<<<<<< HEAD
 
             txtMa.Text = dgvSach["clMaSach", selectIndex].Value.ToString();
             txtTen.Text = dgvSach["clTen", selectIndex].Value.ToString();
@@ -187,6 +282,21 @@ namespace QuanLyThuVienHVKTQS
 
             txtGioiThieu.Text = dgvSach["clGioiThieu", selectIndex].Value.ToString();
 
+=======
+
+            txtMa.Text = dgvSach["clMaSach", selectIndex].Value.ToString();
+            txtTen.Text = dgvSach["clTen", selectIndex].Value.ToString();
+            txtTacGia.Text = dgvSach["clTacGia", selectIndex].Value.ToString();
+
+            int noibo = int.Parse(dgvSach["clNoiBo", selectIndex].Value.ToString());
+            if (noibo == 1)
+                ckbNoiBo.Checked = true;
+            else
+                ckbNoiBo.Checked = false;
+
+            txtGioiThieu.Text = dgvSach["clGioiThieu", selectIndex].Value.ToString();
+
+>>>>>>> origin/master
             int loaisach = int.Parse(dgvSach["clLoaiSach", selectIndex].Value.ToString());
             //if (cmbLoaiSach.ValueMember == loaisach.ToString())
             //    cmbLoaiSach.DisplayMember = cmbLoaiSach.SelectedItem[loaisach]
@@ -194,7 +304,14 @@ namespace QuanLyThuVienHVKTQS
         }
         private void btnSau_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (SachBUL.Instance.UpdateSach(SetSach()))
+=======
+            int selectIndex = dgvSach.SelectedRows[0].Index;
+            book.Ma = int.Parse(dgvSach["clId", selectIndex].Value.ToString());
+
+            if (SachBUL.Instance.UpdateSach(SetSach(book)))
+>>>>>>> origin/master
             {
                 MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadSach();

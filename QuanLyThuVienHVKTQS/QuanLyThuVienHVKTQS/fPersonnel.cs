@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using DTO;
 using BUL;
 
-
 namespace QuanLyThuVienHVKTQS
 {
     public partial class fPersonnel : Form
@@ -86,11 +85,20 @@ namespace QuanLyThuVienHVKTQS
             dgvDSNV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+        SachBUL _sach = new SachBUL();
+        private void LoadKhoSach()
+        {
+            dgvKhoSach.DataSource = _sach.GetAllBook();
+        }
+
         private void fPersonnel_Load(object sender, EventArgs e)
         {
             LoadNhanSu();
+            dgvDSNV.ClearSelection();
+            LoadKhoSach();
+            dgvKhoSach.ClearSelection();
         }
-        
+
 
         private void btnAnhNV_Click(object sender, EventArgs e)
         {
@@ -168,11 +176,11 @@ namespace QuanLyThuVienHVKTQS
                     rdbNamNV.Checked = true;
                 else
                     rdbNuNV.Checked = true;
-            
+
                 txtTKNV.Text = row.Cells["clTaiKhoan"].Value.ToString();
                 txtMKNV.Text = row.Cells["clMatKhau"].Value.ToString();
 
-                int ql = int.Parse(row.Cells["clQuanLy"].Value.ToString()) ;
+                int ql = int.Parse(row.Cells["clQuanLy"].Value.ToString());
                 if (ql == 1)
                     ckbQLNV.Checked = true;
                 else
@@ -184,10 +192,97 @@ namespace QuanLyThuVienHVKTQS
             }
         }
 
+<<<<<<< HEAD
         private void btnTKNhanVien_Click(object sender, EventArgs e)
         {
             
             dgvDSNV.DataSource = NhanSuBUL.Instance.getByIdNS(txtTKNhanVien.Text);
+=======
+<<<<<<< HEAD
+        private void btnTKNhanVien_Click(object sender, EventArgs e)
+        {
+            
+            dgvDSNV.DataSource = NhanSuBUL.Instance.getByIdNS(txtTKNhanVien.Text);
+=======
+        private void btnThemMoi_Click(object sender, EventArgs e)
+        {
+            using (fBook frm = new fBook())
+            {
+                frm.IsThemMoi = true;
+                frm.ShowDialog();
+                LoadKhoSach();
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvKhoSach.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Chưa chọn bản ghi để xóa!");
+                return;
+            }
+            else
+                foreach (DataGridViewRow dgr in dgvKhoSach.Rows)
+                {
+                    if (dgr.Selected)
+                    {
+                        DialogResult dialogresult = MessageBox.Show("Tựa sách " + dgr.Cells["tensach"].Value.ToString() + " sẽ bị xóa!", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (dialogresult == DialogResult.Yes)
+                        {
+                            if (_sach.deleteSach(dgr.Cells[0].Value.ToString()))
+                            {
+                                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                                LoadKhoSach();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (dgvKhoSach.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Chọn bản ghi cần sửa!");
+                return;
+            }
+            else
+            {
+                foreach (DataGridViewRow dgr in dgvKhoSach.SelectedRows)
+                {
+                    Sach book = new Sach();
+                    book.Ma = int.Parse(dgr.Cells["id"].Value.ToString());
+                    book.Maloaisach = int.Parse(dgr.Cells["idloaisach"].Value.ToString());
+                    book.Tensach = dgr.Cells["tensach"].Value.ToString();
+                    book.Tacgia = dgr.Cells["tacgia"].Value.ToString();
+                    book.Gioithieu = dgr.Cells["gioithieu"].Value.ToString();
+                    fBook frmBook = new fBook();
+                    frmBook.LoadSach(book);
+                    frmBook.Ma = book.Ma;
+                    frmBook.ShowDialog();
+                    LoadKhoSach();
+                }
+            }
+        }
+
+        private void tabQuanLi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabQuanLi.SelectedIndex == 0)
+            {
+                LoadNhanSu();
+                dgvDSNV.ClearSelection();
+            }
+            if (tabQuanLi.SelectedIndex == 1)
+            {
+                LoadKhoSach();
+                dgvKhoSach.ClearSelection();
+            }
+>>>>>>> origin/master
+>>>>>>> origin/master
         }
     }
 }

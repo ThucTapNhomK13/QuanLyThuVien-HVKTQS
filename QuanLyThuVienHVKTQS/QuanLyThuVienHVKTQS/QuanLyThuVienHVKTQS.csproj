@@ -79,6 +79,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="fBook.resx">
+      <DependentUpon>fBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCard.resx">
+      <DependentUpon>fCard.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> origin/master
+>>>>>>> origin/master
     <EmbeddedResource Include="fInformationUser.resx">
       <DependentUpon>fInformationUser.cs</DependentUpon>
     </EmbeddedResource>
