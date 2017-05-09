@@ -49,16 +49,10 @@
             this.btnTKMuon = new System.Windows.Forms.Button();
             this.txtTKMuon = new System.Windows.Forms.TextBox();
             this.dgvDSMuon = new System.Windows.Forms.DataGridView();
-            this.clIdM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clngaymuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clhanmuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clngaytra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnguoimuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clMSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnNLTra = new System.Windows.Forms.Button();
             this.btnTraSach = new System.Windows.Forms.Button();
             this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -73,6 +67,13 @@
             this.btnTKTra = new System.Windows.Forms.Button();
             this.txtTKTra = new System.Windows.Forms.TextBox();
             this.dgvDSTra = new System.Windows.Forms.DataGridView();
+            this.clIdM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clngaymuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clhanmuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clngaytra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnguoimuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clMSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTngaymuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clThanmuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -313,61 +314,6 @@
             this.dgvDSMuon.TabIndex = 0;
             this.dgvDSMuon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSMuon_CellClick);
             // 
-            // clIdM
-            // 
-            this.clIdM.DataPropertyName = "id";
-            this.clIdM.HeaderText = "Id";
-            this.clIdM.Name = "clIdM";
-            this.clIdM.ReadOnly = true;
-            this.clIdM.Visible = false;
-            // 
-            // clngaymuon
-            // 
-            this.clngaymuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clngaymuon.DataPropertyName = "ngaymuon";
-            this.clngaymuon.HeaderText = "Ngày mượn";
-            this.clngaymuon.Name = "clngaymuon";
-            this.clngaymuon.ReadOnly = true;
-            // 
-            // clhanmuon
-            // 
-            this.clhanmuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clhanmuon.DataPropertyName = "hanmuon";
-            this.clhanmuon.HeaderText = "Hạn mượn";
-            this.clhanmuon.Name = "clhanmuon";
-            this.clhanmuon.ReadOnly = true;
-            // 
-            // clngaytra
-            // 
-            this.clngaytra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clngaytra.DataPropertyName = "ngaytra";
-            this.clngaytra.HeaderText = "Ngày trả";
-            this.clngaytra.Name = "clngaytra";
-            this.clngaytra.ReadOnly = true;
-            // 
-            // clnhanvien
-            // 
-            this.clnhanvien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clnhanvien.DataPropertyName = "idnhansu";
-            this.clnhanvien.HeaderText = "Nhân viên";
-            this.clnhanvien.Name = "clnhanvien";
-            this.clnhanvien.ReadOnly = true;
-            // 
-            // clnguoimuon
-            // 
-            this.clnguoimuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clnguoimuon.DataPropertyName = "idthethuvien";
-            this.clnguoimuon.HeaderText = "Người mượn";
-            this.clnguoimuon.Name = "clnguoimuon";
-            this.clnguoimuon.ReadOnly = true;
-            // 
-            // clMSach
-            // 
-            this.clMSach.DataPropertyName = "idsach";
-            this.clMSach.HeaderText = "Mã sách";
-            this.clMSach.Name = "clMSach";
-            this.clMSach.ReadOnly = true;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panel1);
@@ -396,6 +342,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.btnNLTra);
             this.panel2.Controls.Add(this.btnTraSach);
             this.panel2.Controls.Add(this.dtpNgayTra);
             this.panel2.Controls.Add(this.label7);
@@ -411,6 +358,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(288, 497);
             this.panel2.TabIndex = 4;
+            // 
+            // btnNLTra
+            // 
+            this.btnNLTra.Location = new System.Drawing.Point(206, 265);
+            this.btnNLTra.Name = "btnNLTra";
+            this.btnNLTra.Size = new System.Drawing.Size(75, 23);
+            this.btnNLTra.TabIndex = 17;
+            this.btnNLTra.Text = "Nhập lại";
+            this.btnNLTra.UseVisualStyleBackColor = true;
+            this.btnNLTra.Click += new System.EventHandler(this.btnNLTra_Click);
             // 
             // btnTraSach
             // 
@@ -444,7 +401,6 @@
             // 
             this.txtNVTra.Location = new System.Drawing.Point(92, 157);
             this.txtNVTra.Name = "txtNVTra";
-            this.txtNVTra.ReadOnly = true;
             this.txtNVTra.Size = new System.Drawing.Size(189, 20);
             this.txtNVTra.TabIndex = 12;
             // 
@@ -461,7 +417,6 @@
             // 
             this.txtTSach.Location = new System.Drawing.Point(92, 127);
             this.txtTSach.Name = "txtTSach";
-            this.txtTSach.ReadOnly = true;
             this.txtTSach.Size = new System.Drawing.Size(189, 20);
             this.txtTSach.TabIndex = 12;
             // 
@@ -478,7 +433,6 @@
             // 
             this.txtNMTra.Location = new System.Drawing.Point(92, 187);
             this.txtNMTra.Name = "txtNMTra";
-            this.txtNMTra.ReadOnly = true;
             this.txtNMTra.Size = new System.Drawing.Size(189, 20);
             this.txtNMTra.TabIndex = 13;
             // 
@@ -550,6 +504,61 @@
             this.dgvDSTra.Size = new System.Drawing.Size(697, 332);
             this.dgvDSTra.TabIndex = 0;
             this.dgvDSTra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTra_CellClick);
+            // 
+            // clIdM
+            // 
+            this.clIdM.DataPropertyName = "id";
+            this.clIdM.HeaderText = "Id";
+            this.clIdM.Name = "clIdM";
+            this.clIdM.ReadOnly = true;
+            this.clIdM.Visible = false;
+            // 
+            // clngaymuon
+            // 
+            this.clngaymuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clngaymuon.DataPropertyName = "ngaymuon";
+            this.clngaymuon.HeaderText = "Ngày mượn";
+            this.clngaymuon.Name = "clngaymuon";
+            this.clngaymuon.ReadOnly = true;
+            // 
+            // clhanmuon
+            // 
+            this.clhanmuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clhanmuon.DataPropertyName = "hanmuon";
+            this.clhanmuon.HeaderText = "Hạn mượn";
+            this.clhanmuon.Name = "clhanmuon";
+            this.clhanmuon.ReadOnly = true;
+            // 
+            // clngaytra
+            // 
+            this.clngaytra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clngaytra.DataPropertyName = "ngaytra";
+            this.clngaytra.HeaderText = "Ngày trả";
+            this.clngaytra.Name = "clngaytra";
+            this.clngaytra.ReadOnly = true;
+            // 
+            // clnhanvien
+            // 
+            this.clnhanvien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnhanvien.DataPropertyName = "idnhansu";
+            this.clnhanvien.HeaderText = "Nhân viên";
+            this.clnhanvien.Name = "clnhanvien";
+            this.clnhanvien.ReadOnly = true;
+            // 
+            // clnguoimuon
+            // 
+            this.clnguoimuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnguoimuon.DataPropertyName = "idthethuvien";
+            this.clnguoimuon.HeaderText = "Người mượn";
+            this.clnguoimuon.Name = "clnguoimuon";
+            this.clnguoimuon.ReadOnly = true;
+            // 
+            // clMSach
+            // 
+            this.clMSach.DataPropertyName = "idsach";
+            this.clMSach.HeaderText = "Mã sách";
+            this.clMSach.Name = "clMSach";
+            this.clMSach.ReadOnly = true;
             // 
             // clTma
             // 
@@ -661,6 +670,7 @@
         private System.Windows.Forms.TextBox txtNMMuon;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnNLTra;
         private System.Windows.Forms.Button btnTraSach;
         private System.Windows.Forms.DateTimePicker dtpNgayTra;
         private System.Windows.Forms.Label label7;

@@ -82,9 +82,7 @@ namespace QuanLyThuVienHVKTQS
 
         private void btnNLTra_Click(object sender, EventArgs e)
         {
-            txtNMTra.Clear();
-            txtNVTra.Clear();
-            txtTSach.Clear();
+
         }
 
         private void btnTraSach_Click(object sender, EventArgs e)
@@ -113,9 +111,7 @@ namespace QuanLyThuVienHVKTQS
 
         private void btnNLMuon_Click(object sender, EventArgs e)
         {
-            txtMSach.Clear();
-            txtNMMuon.Clear();
-            txtNVMuon.Clear();
+
         }
 
         private void btnTKMuon_Click(object sender, EventArgs e)

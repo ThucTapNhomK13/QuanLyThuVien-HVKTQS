@@ -3,8 +3,8 @@ C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQ
 C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.dll
 C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.pdb
-C:\Users\LeMinh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\bin\Debug\DAO.dll
-C:\Users\LeMinh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\bin\Debug\DAO.pdb
-C:\Users\LeMinh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
-C:\Users\LeMinh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.dll
-C:\Users\LeMinh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.pdb
+C:\Users\mkcuong\OneDrive\SourceCSharp\TTNhom\QuanLyThuVienHVKTQS\DAO\bin\Debug\DAO.dll
+C:\Users\mkcuong\OneDrive\SourceCSharp\TTNhom\QuanLyThuVienHVKTQS\DAO\bin\Debug\DAO.pdb
+C:\Users\mkcuong\OneDrive\SourceCSharp\TTNhom\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\mkcuong\OneDrive\SourceCSharp\TTNhom\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.dll
+C:\Users\mkcuong\OneDrive\SourceCSharp\TTNhom\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.pdb

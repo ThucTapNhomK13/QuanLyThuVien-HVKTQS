@@ -19,7 +19,7 @@ namespace QuanLyThuVienHVKTQS
         public closeFormHandle closeForm;
 
         List<LoaiSach> lsLoaiSach = LoaiSachBUL.Instance.ListLoaiSach();
-        Sach book = new Sach();
+
 
 
         public fMain()
@@ -104,10 +104,11 @@ namespace QuanLyThuVienHVKTQS
         {
 
         }
-        private Sach SetSach (Sach book)
+        private Sach SetSach ()
         {
-           
-            
+            int selectIndex = dgvSach.SelectedRows[0].Index;
+            Sach book = new Sach();
+            book.Ma = int.Parse(dgvSach["clId", selectIndex].Value.ToString());
             book.Masach = txtMa.Text;
             book.Tensach = txtTen.Text;
             book.Tacgia = txtTacGia.Text;
@@ -124,7 +125,7 @@ namespace QuanLyThuVienHVKTQS
         private void btnThem_Click(object sender, EventArgs e)
         {
             
-            if (SachBUL.Instance.InsertSach(SetSach(book)))
+            if (SachBUL.Instance.InsertSach(SetSach()))
             {
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadSach();
@@ -193,10 +194,7 @@ namespace QuanLyThuVienHVKTQS
         }
         private void btnSau_Click(object sender, EventArgs e)
         {
-            int selectIndex = dgvSach.SelectedRows[0].Index;
-            book.Ma = int.Parse(dgvSach["clId", selectIndex].Value.ToString());
-
-            if (SachBUL.Instance.UpdateSach(SetSach(book)))
+            if (SachBUL.Instance.UpdateSach(SetSach()))
             {
                 MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadSach();
