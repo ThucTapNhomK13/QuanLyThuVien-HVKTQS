@@ -11,8 +11,22 @@ namespace DTO
 {
     public class Kho
     {
+        private int _ma;
         private string _tenkho;
         private string _vitri;
+
+        public int Ma
+        {
+            get
+            {
+                return _ma;
+            }
+
+            set
+            {
+                _ma = value;
+            }
+        }
 
         public string Tenkho
         {
@@ -44,7 +58,8 @@ namespace DTO
         public Kho () { }
         public Kho (DataRow dr)
         {
-            Tenkho = dr["tenkho"].ToString();
+            Ma = int.Parse(dr["id"].ToString());
+            Tenkho = dr["tenkhoa"].ToString();
             Vitri = dr["vitri"].ToString();
         }
 

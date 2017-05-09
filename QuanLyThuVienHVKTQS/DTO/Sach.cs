@@ -11,37 +11,25 @@ namespace DTO
 {
     public class Sach
     {
-        private int _id;
-        private int _idloaisach;
+        private int _ma;
         private string _tensach;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
         private int? _maloaisach;
         private int _noibo;
         private string _masach;
         private string _tacgia;
         private string _gioithieu;
         private string _trangthai;
-<<<<<<< HEAD
-=======
-=======
-        private string _tacgia;
-        private string _gioithieu;
->>>>>>> origin/master
->>>>>>> origin/master
 
         public int Ma
         {
             get
             {
-                return _id;
+                return _ma;
             }
 
             set
             {
-                _id = value;
+                _ma = value;
             }
         }
 
@@ -62,81 +50,12 @@ namespace DTO
         {
             get
             {
-                return _idloaisach;
+                return _maloaisach;
             }
 
             set
             {
-                _idloaisach = value;
-            }
-        }
-
-<<<<<<< HEAD
-        public int Noibo
-        {
-            get
-            {
-                return _noibo;
-            }
-
-            set
-            {
-                _noibo = value;
-            }
-        }
-
-        public string Masach
-        {
-            get
-            {
-                return _masach;
-            }
-
-            set
-            {
-                _masach = value;
-            }
-        }
-
-=======
->>>>>>> origin/master
-        public string Tacgia
-        {
-            get
-            {
-                return _tacgia;
-            }
-<<<<<<< HEAD
-
-            set
-            {
-                _tacgia = value;
-            }
-        }
-
-        public string Gioithieu
-        {
-            get
-            {
-                return _gioithieu;
-            }
-
-            set
-            {
-                _gioithieu = value;
-            }
-        }
-
-        public string Trangthai
-        {
-            get
-            {
-                return _trangthai;
-            }
-
-            set
-            {
-                _trangthai = value;
+                _maloaisach = value;
             }
         }
 
@@ -206,18 +125,9 @@ namespace DTO
         }
 
         public Sach() { }
-=======
->>>>>>> origin/master
 
-            set
-            {
-                _tacgia = value;
-            }
-        }
-
-        public string Gioithieu
+        public Sach (DataRow dr)
         {
-<<<<<<< HEAD
             Ma = int.Parse(dr["id"].ToString());
             Tensach = dr["tensach"].ToString();
             Maloaisach = int.Parse( dr["idloaisach"].ToString());
@@ -227,34 +137,8 @@ namespace DTO
             Masach = dr["masach"].ToString();
             Noibo = int.Parse(dr["noibo"].ToString());
 
-<<<<<<< HEAD
-=======
-=======
-            get
-            {
-                return _gioithieu;
-            }
-
-            set
-            {
-                _gioithieu = value;
-            }
->>>>>>> origin/master
->>>>>>> origin/master
         }
 
-        public Sach() { }
 
-        public Sach GetSach(DataRow dr)
-        {
-            Sach book = new Sach();
-            book.Ma = int.Parse(dr["id"].ToString());
-            book.Maloaisach = int.Parse(dr["idloaisach"].ToString());
-            book.Tensach = dr["tensach"].ToString();
-            book.Tacgia = dr["tacgia"].ToString();
-            book.Gioithieu = dr["gioithieu"].ToString();
-
-            return book;
-        }
     }
 }

@@ -75,10 +75,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
             this.dgvSach = new System.Windows.Forms.DataGridView();
             this.clId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clMaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,24 +84,11 @@
             this.clNoiBo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clGioiThieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-<<<<<<< HEAD
-=======
-=======
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
->>>>>>> origin/master
->>>>>>> origin/master
             this.btnTKSach = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTKSach = new System.Windows.Forms.TextBox();
             this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
-<<<<<<< HEAD
             this.cmbLoaiSach = new System.Windows.Forms.ComboBox();
-=======
-<<<<<<< HEAD
-            this.cmbLoaiSach = new System.Windows.Forms.ComboBox();
-=======
->>>>>>> origin/master
->>>>>>> origin/master
             this.menuStrip1.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -113,15 +96,7 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
-=======
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
->>>>>>> origin/master
->>>>>>> origin/master
             this.toolStripContainer2.ContentPanel.SuspendLayout();
             this.toolStripContainer2.SuspendLayout();
             this.SuspendLayout();
@@ -241,14 +216,7 @@
             // 
             // panel4
             // 
-<<<<<<< HEAD
             this.panel4.Controls.Add(this.cmbLoaiSach);
-=======
-<<<<<<< HEAD
-            this.panel4.Controls.Add(this.cmbLoaiSach);
-=======
->>>>>>> origin/master
->>>>>>> origin/master
             this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.btnXoa);
             this.panel4.Controls.Add(this.btnNhapLai);
@@ -259,13 +227,6 @@
             this.panel4.Controls.Add(this.cmbTinhTrang);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label10);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-            this.panel4.Controls.Add(this.txtLoaiSach);
->>>>>>> origin/master
->>>>>>> origin/master
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.txtTacGia);
             this.panel4.Controls.Add(this.label12);
@@ -273,15 +234,7 @@
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.txtMa);
             this.panel4.Controls.Add(this.label14);
-<<<<<<< HEAD
             this.panel4.Location = new System.Drawing.Point(867, 27);
-=======
-<<<<<<< HEAD
-            this.panel4.Location = new System.Drawing.Point(867, 27);
-=======
-            this.panel4.Location = new System.Drawing.Point(864, 27);
->>>>>>> origin/master
->>>>>>> origin/master
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(300, 486);
             this.panel4.TabIndex = 1;
@@ -304,14 +257,7 @@
             this.btnXoa.TabIndex = 5;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-=======
-<<<<<<< HEAD
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-=======
->>>>>>> origin/master
->>>>>>> origin/master
             // 
             // btnNhapLai
             // 
@@ -321,14 +267,7 @@
             this.btnNhapLai.TabIndex = 5;
             this.btnNhapLai.Text = "Nhập lại";
             this.btnNhapLai.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
-=======
-<<<<<<< HEAD
-            this.btnNhapLai.Click += new System.EventHandler(this.btnNhapLai_Click);
-=======
->>>>>>> origin/master
->>>>>>> origin/master
             // 
             // btnSau
             // 
@@ -338,14 +277,7 @@
             this.btnSau.TabIndex = 5;
             this.btnSau.Text = "Sửa";
             this.btnSau.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             this.btnSau.Click += new System.EventHandler(this.btnSau_Click);
-=======
-<<<<<<< HEAD
-            this.btnSau.Click += new System.EventHandler(this.btnSau_Click);
-=======
->>>>>>> origin/master
->>>>>>> origin/master
             // 
             // btnThem
             // 
@@ -355,14 +287,7 @@
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-=======
-<<<<<<< HEAD
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-=======
->>>>>>> origin/master
->>>>>>> origin/master
             // 
             // ckbNoiBo
             // 
@@ -385,18 +310,9 @@
             // cmbTinhTrang
             // 
             this.cmbTinhTrang.FormattingEnabled = true;
-<<<<<<< HEAD
             this.cmbTinhTrang.Items.AddRange(new object[] {
             "Mới",
             "Mới nhập"});
-=======
-<<<<<<< HEAD
-            this.cmbTinhTrang.Items.AddRange(new object[] {
-            "Mới",
-            "Mới nhập"});
-=======
->>>>>>> origin/master
->>>>>>> origin/master
             this.cmbTinhTrang.Location = new System.Drawing.Point(88, 192);
             this.cmbTinhTrang.Name = "cmbTinhTrang";
             this.cmbTinhTrang.Size = new System.Drawing.Size(186, 21);
@@ -420,23 +336,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 15);
             this.label10.TabIndex = 0;
-<<<<<<< HEAD
             this.label10.Text = "Trạng thái";
-=======
-<<<<<<< HEAD
-            this.label10.Text = "Trạng thái";
-=======
-            this.label10.Text = "Tình trạng";
-            // 
-            // txtLoaiSach
-            // 
-            this.txtLoaiSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoaiSach.Location = new System.Drawing.Point(88, 166);
-            this.txtLoaiSach.Name = "txtLoaiSach";
-            this.txtLoaiSach.Size = new System.Drawing.Size(186, 21);
-            this.txtLoaiSach.TabIndex = 1;
->>>>>>> origin/master
->>>>>>> origin/master
             // 
             // label11
             // 
@@ -653,15 +553,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.label2);
-<<<<<<< HEAD
             this.panel2.Controls.Add(this.dgvSach);
-=======
-<<<<<<< HEAD
-            this.panel2.Controls.Add(this.dgvSach);
-=======
-            this.panel2.Controls.Add(this.dataGridView1);
->>>>>>> origin/master
->>>>>>> origin/master
             this.panel2.Controls.Add(this.btnTKSach);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtTKSach);
@@ -680,10 +572,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Quản lý sách";
             // 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
             // dgvSach
             // 
             this.dgvSach.AllowUserToAddRows = false;
@@ -766,18 +654,6 @@
             this.clLoaiSach.Name = "clLoaiSach";
             this.clLoaiSach.ReadOnly = true;
             this.clLoaiSach.Visible = false;
-<<<<<<< HEAD
-=======
-=======
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 139);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(849, 344);
-            this.dataGridView1.TabIndex = 3;
->>>>>>> origin/master
->>>>>>> origin/master
             // 
             // btnTKSach
             // 
@@ -787,14 +663,7 @@
             this.btnTKSach.TabIndex = 2;
             this.btnTKSach.Text = "Tìm kiếm";
             this.btnTKSach.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             this.btnTKSach.Click += new System.EventHandler(this.btnTKSach_Click);
-=======
-<<<<<<< HEAD
-            this.btnTKSach.Click += new System.EventHandler(this.btnTKSach_Click);
-=======
->>>>>>> origin/master
->>>>>>> origin/master
             // 
             // label1
             // 
@@ -830,22 +699,6 @@
             this.toolStripContainer2.TabIndex = 9;
             this.toolStripContainer2.Text = "toolStripContainer2";
             this.toolStripContainer2.TopToolStripPanelVisible = false;
-<<<<<<< HEAD
-            // 
-            // cmbLoaiSach
-            // 
-            this.cmbLoaiSach.FormattingEnabled = true;
-            this.cmbLoaiSach.Items.AddRange(new object[] {
-            "Hết sách",
-            "Trong kho",
-            "Bảo quản",
-            "Mới nhập"});
-            this.cmbLoaiSach.Location = new System.Drawing.Point(88, 166);
-            this.cmbLoaiSach.Name = "cmbLoaiSach";
-            this.cmbLoaiSach.Size = new System.Drawing.Size(186, 21);
-            this.cmbLoaiSach.TabIndex = 7;
-=======
->>>>>>> origin/master
             // 
             // cmbLoaiSach
             // 
@@ -886,15 +739,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).EndInit();
-=======
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).EndInit();
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
->>>>>>> origin/master
->>>>>>> origin/master
             this.toolStripContainer2.ContentPanel.ResumeLayout(false);
             this.toolStripContainer2.ResumeLayout(false);
             this.toolStripContainer2.PerformLayout();
