@@ -13,3 +13,7 @@ C:\Users\mkcuong\Desktop\New folder\QuanLyThuVienHVKTQS\DTO\bin\Debug\DTO.pdb
 C:\Users\mkcuong\Desktop\New folder\QuanLyThuVienHVKTQS\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 C:\Users\mkcuong\Desktop\New folder\QuanLyThuVienHVKTQS\DTO\obj\Debug\DTO.dll
 C:\Users\mkcuong\Desktop\New folder\QuanLyThuVienHVKTQS\DTO\obj\Debug\DTO.pdb
+C:\Users\MienAnh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DTO\bin\Debug\DTO.dll
+C:\Users\MienAnh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DTO\bin\Debug\DTO.pdb
+C:\Users\MienAnh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DTO\obj\Debug\DTO.dll
+C:\Users\MienAnh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DTO\obj\Debug\DTO.pdb

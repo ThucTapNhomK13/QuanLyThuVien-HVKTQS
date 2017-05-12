@@ -31,7 +31,7 @@ namespace BUL
             }
         }
 
-        private SachBUL() { }
+        public SachBUL() { }
 
         public DataTable getAllSach ()
         {
@@ -100,6 +100,13 @@ namespace BUL
             if (DBConnect.Instance.InsertUpdateDelete(query, para))
                 return true;
             return false;
+        }
+
+        public DataTable GetAllBook()
+        {
+            string query = "select s.id, s.idloaisach, s.tensach, s.noibo, s.masach, s.tacgia, s.gioithieu, l.soluong, s.trangthai from Sach s inner join LoaiSach l on s.idloaisach = l.id";
+
+            return DBConnect.Instance.Select(query, null);
         }
     }
 }

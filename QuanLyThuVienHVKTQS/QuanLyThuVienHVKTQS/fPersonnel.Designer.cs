@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmtDGV = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ImenuDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.ImenuShowInfomation = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +69,19 @@
             this.clAnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panKhoSach = new System.Windows.Forms.Panel();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.txtViTri = new System.Windows.Forms.TextBox();
+            this.lblViTri = new System.Windows.Forms.Label();
+            this.txtTenKho = new System.Windows.Forms.TextBox();
+            this.lblTenKho = new System.Windows.Forms.Label();
+            this.lblKhoSach = new System.Windows.Forms.Label();
+            this.dgvKhoSach = new System.Windows.Forms.DataGridView();
+            this.tenkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vitri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnNhap = new System.Windows.Forms.Button();
             this.cmtDGV.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -75,6 +89,9 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panKhoSach.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhoSach)).BeginInit();
             this.SuspendLayout();
             // 
             // cmtDGV
@@ -269,7 +286,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(28, 367);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 15);
+            this.label4.Size = new System.Drawing.Size(59, 15);
             this.label4.TabIndex = 2;
             this.label4.Text = "Tài khoản";
             // 
@@ -441,6 +458,7 @@
             this.clMatKhau.HeaderText = "Mật khẩu";
             this.clMatKhau.Name = "clMatKhau";
             this.clMatKhau.ReadOnly = true;
+            this.clMatKhau.Visible = false;
             // 
             // clQuanLy
             // 
@@ -470,6 +488,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.panKhoSach);
+            this.tabPage2.Controls.Add(this.dgvKhoSach);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -477,6 +497,151 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Kho chứa";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panKhoSach
+            // 
+            this.panKhoSach.Controls.Add(this.btnNhap);
+            this.panKhoSach.Controls.Add(this.btnXoa);
+            this.panKhoSach.Controls.Add(this.btnSua);
+            this.panKhoSach.Controls.Add(this.btnThem);
+            this.panKhoSach.Controls.Add(this.txtViTri);
+            this.panKhoSach.Controls.Add(this.lblViTri);
+            this.panKhoSach.Controls.Add(this.txtTenKho);
+            this.panKhoSach.Controls.Add(this.lblTenKho);
+            this.panKhoSach.Controls.Add(this.lblKhoSach);
+            this.panKhoSach.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panKhoSach.Location = new System.Drawing.Point(3, 3);
+            this.panKhoSach.Name = "panKhoSach";
+            this.panKhoSach.Size = new System.Drawing.Size(357, 524);
+            this.panKhoSach.TabIndex = 11;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(276, 408);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 29);
+            this.btnXoa.TabIndex = 16;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(186, 408);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 29);
+            this.btnSua.TabIndex = 15;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(96, 408);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 29);
+            this.btnThem.TabIndex = 14;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // txtViTri
+            // 
+            this.txtViTri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtViTri.Location = new System.Drawing.Point(90, 283);
+            this.txtViTri.Name = "txtViTri";
+            this.txtViTri.Size = new System.Drawing.Size(247, 26);
+            this.txtViTri.TabIndex = 13;
+            // 
+            // lblViTri
+            // 
+            this.lblViTri.AutoSize = true;
+            this.lblViTri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViTri.Location = new System.Drawing.Point(18, 286);
+            this.lblViTri.Name = "lblViTri";
+            this.lblViTri.Size = new System.Drawing.Size(40, 20);
+            this.lblViTri.TabIndex = 12;
+            this.lblViTri.Text = "Vị trí";
+            // 
+            // txtTenKho
+            // 
+            this.txtTenKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKho.Location = new System.Drawing.Point(90, 227);
+            this.txtTenKho.Name = "txtTenKho";
+            this.txtTenKho.Size = new System.Drawing.Size(247, 26);
+            this.txtTenKho.TabIndex = 11;
+            // 
+            // lblTenKho
+            // 
+            this.lblTenKho.AutoSize = true;
+            this.lblTenKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenKho.Location = new System.Drawing.Point(18, 230);
+            this.lblTenKho.Name = "lblTenKho";
+            this.lblTenKho.Size = new System.Drawing.Size(66, 20);
+            this.lblTenKho.TabIndex = 10;
+            this.lblTenKho.Text = "Tên kho";
+            // 
+            // lblKhoSach
+            // 
+            this.lblKhoSach.AutoSize = true;
+            this.lblKhoSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKhoSach.Location = new System.Drawing.Point(102, 72);
+            this.lblKhoSach.Name = "lblKhoSach";
+            this.lblKhoSach.Size = new System.Drawing.Size(127, 31);
+            this.lblKhoSach.TabIndex = 9;
+            this.lblKhoSach.Text = "Kho sách";
+            // 
+            // dgvKhoSach
+            // 
+            this.dgvKhoSach.AllowUserToAddRows = false;
+            this.dgvKhoSach.AllowUserToDeleteRows = false;
+            this.dgvKhoSach.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKhoSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvKhoSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKhoSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tenkho,
+            this.vitri});
+            this.dgvKhoSach.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dgvKhoSach.Location = new System.Drawing.Point(385, 3);
+            this.dgvKhoSach.Name = "dgvKhoSach";
+            this.dgvKhoSach.ReadOnly = true;
+            this.dgvKhoSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKhoSach.Size = new System.Drawing.Size(608, 524);
+            this.dgvKhoSach.TabIndex = 10;
+            this.dgvKhoSach.SelectionChanged += new System.EventHandler(this.dgvKhoSach_SelectionChanged);
+            // 
+            // tenkho
+            // 
+            this.tenkho.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenkho.DataPropertyName = "tenkho";
+            this.tenkho.HeaderText = "Tên kho";
+            this.tenkho.Name = "tenkho";
+            this.tenkho.ReadOnly = true;
+            // 
+            // vitri
+            // 
+            this.vitri.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.vitri.DataPropertyName = "vitri";
+            this.vitri.HeaderText = "Vị trí";
+            this.vitri.Name = "vitri";
+            this.vitri.ReadOnly = true;
+            // 
+            // btnNhap
+            // 
+            this.btnNhap.Location = new System.Drawing.Point(6, 408);
+            this.btnNhap.Name = "btnNhap";
+            this.btnNhap.Size = new System.Drawing.Size(75, 29);
+            this.btnNhap.TabIndex = 17;
+            this.btnNhap.Text = "Nhập kho";
+            this.btnNhap.UseVisualStyleBackColor = true;
+            this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
             // 
             // fPersonnel
             // 
@@ -499,6 +664,10 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.panKhoSach.ResumeLayout(false);
+            this.panKhoSach.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhoSach)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -535,6 +704,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label lblKhoSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn clMa;
         private System.Windows.Forms.DataGridViewTextBoxColumn clHoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn clNgaySinh;
@@ -543,5 +713,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clMatKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn clQuanLy;
         private System.Windows.Forms.DataGridViewTextBoxColumn clAnh;
+        private System.Windows.Forms.DataGridView dgvKhoSach;
+        private System.Windows.Forms.Panel panKhoSach;
+        private System.Windows.Forms.Label lblTenKho;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.TextBox txtViTri;
+        private System.Windows.Forms.Label lblViTri;
+        private System.Windows.Forms.TextBox txtTenKho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenkho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vitri;
+        private System.Windows.Forms.Button btnNhap;
     }
 }

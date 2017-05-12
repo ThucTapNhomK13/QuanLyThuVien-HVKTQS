@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 using DTO;
 using BUL;
-
+using BUS;
 
 namespace QuanLyThuVienHVKTQS
 {
@@ -86,11 +86,21 @@ namespace QuanLyThuVienHVKTQS
             dgvDSNV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+        KhoBUL _kho = new KhoBUL();
+        private void LoadKhoSach()
+        {
+            dgvKhoSach.DataSource = _kho.getAll();
+            dgvKhoSach.ClearSelection();
+        }
+
+
         private void fPersonnel_Load(object sender, EventArgs e)
         {
             LoadNhanSu();
+            LoadKhoSach();
+            btnThem.Enabled = false;
         }
-        
+
 
         private void btnAnhNV_Click(object sender, EventArgs e)
         {
@@ -168,11 +178,11 @@ namespace QuanLyThuVienHVKTQS
                     rdbNamNV.Checked = true;
                 else
                     rdbNuNV.Checked = true;
-            
+
                 txtTKNV.Text = row.Cells["clTaiKhoan"].Value.ToString();
                 txtMKNV.Text = row.Cells["clMatKhau"].Value.ToString();
 
-                int ql = int.Parse(row.Cells["clQuanLy"].Value.ToString()) ;
+                int ql = int.Parse(row.Cells["clQuanLy"].Value.ToString());
                 if (ql == 1)
                     ckbQLNV.Checked = true;
                 else
@@ -186,8 +196,104 @@ namespace QuanLyThuVienHVKTQS
 
         private void btnTKNhanVien_Click(object sender, EventArgs e)
         {
-            
+
             dgvDSNV.DataSource = NhanSuBUL.Instance.getByIdNS(txtTKNhanVien.Text);
+        }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if(txtTenKho.Text=="")
+            {
+                MessageBox.Show("Chưa nhập tên kho!");
+                txtTenKho.Focus();
+            }
+            else if(txtViTri.Text=="")
+            {
+                MessageBox.Show("Chưa nhập vị trí!");
+                txtViTri.Focus();
+            }
+            else
+            {
+                Kho _kho = new Kho { Tenkho = txtTenKho.Text, Vitri = txtViTri.Text };
+                if (KhoBUL.Instance.InsertKho(_kho))
+                {
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadKhoSach();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }            
+        }
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (dgvKhoSach.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Chọn bản ghi cần sửa!");
+                return;
+            }
+            else
+            {
+                Kho _kho = new Kho { Tenkho = txtTenKho.Text, Vitri = txtViTri.Text };
+                if (KhoBUL.Instance.UpdateKho(_kho))
+                {
+                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadKhoSach();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvKhoSach.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Chưa chọn bản ghi để xóa!");
+                return;
+            }
+            else
+                foreach (DataGridViewRow dgr in dgvKhoSach.Rows)
+                {
+                    if (dgr.Selected)
+                    {
+                        DialogResult dialogresult = MessageBox.Show("Kho sách " + dgr.Cells["tenkho"].Value.ToString() + " sẽ bị xóa!", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (dialogresult == DialogResult.Yes)
+                        {
+                            if (KhoBUL.Instance.Delete(dgr.Cells[0].Value.ToString()))
+                            {
+                                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                                LoadKhoSach();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+        }
+
+        private void dgvKhoSach_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvKhoSach.SelectedRows)
+            {
+                txtTenKho.Text = row.Cells["tenkho"].Value.ToString();
+                txtTenKho.Enabled = false;
+                txtViTri.Text = row.Cells["vitri"].Value.ToString();
+                btnThem.Enabled = false;
+            }
+        }
+
+        private void btnNhap_Click(object sender, EventArgs e)
+        {
+            btnThem.Enabled = true;
+            txtTenKho.Enabled = true;
+            txtTenKho.Clear();
+            txtViTri.Clear();
+            txtTenKho.Focus();
         }
     }
 }

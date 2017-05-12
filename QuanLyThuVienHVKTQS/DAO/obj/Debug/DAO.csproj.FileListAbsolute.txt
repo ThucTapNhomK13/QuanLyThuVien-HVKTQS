@@ -13,3 +13,8 @@ C:\Users\mkcuong\Desktop\New folder\QuanLyThuVienHVKTQS\DAO\bin\Debug\DAO.pdb
 C:\Users\mkcuong\Desktop\New folder\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\mkcuong\Desktop\New folder\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.dll
 C:\Users\mkcuong\Desktop\New folder\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.pdb
+C:\Users\MienAnh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\bin\Debug\DAO.dll
+C:\Users\MienAnh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\bin\Debug\DAO.pdb
+C:\Users\MienAnh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\MienAnh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.dll
+C:\Users\MienAnh\Documents\GitHub\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\DAO\obj\Debug\DAO.pdb
