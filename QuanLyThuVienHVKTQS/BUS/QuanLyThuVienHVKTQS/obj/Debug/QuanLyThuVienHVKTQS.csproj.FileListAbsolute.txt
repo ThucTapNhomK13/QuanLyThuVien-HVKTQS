@@ -56,3 +56,6 @@ C:\Users\mkcuong\Desktop\New folder\QuanLyThuVienHVKTQS\QuanLyThuVienHVKTQS\obj\
 C:\Users\mkcuong\Desktop\New folder\QuanLyThuVienHVKTQS\QuanLyThuVienHVKTQS\obj\Debug\QuanLyThuVienHVKTQS.fPersonnel.resources
 C:\Users\mkcuong\Desktop\New folder\QuanLyThuVienHVKTQS\QuanLyThuVienHVKTQS\obj\Debug\QuanLyThuVienHVKTQS.Properties.Resources.resources
 C:\Users\mkcuong\Desktop\New folder\QuanLyThuVienHVKTQS\QuanLyThuVienHVKTQS\obj\Debug\QuanLyThuVienHVKTQS.csproj.GenerateResource.Cache
+C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\BUS\QuanLyThuVienHVKTQS\bin\Debug\QuanLyThuVienHVKTQS.exe.config
+C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\BUS\QuanLyThuVienHVKTQS\obj\Debug\QuanLyThuVienHVKTQS.exe
+C:\Users\mkcuong\Documents\GitHub\TTNhom\QuanLyThuVien-HVKTQS\QuanLyThuVienHVKTQS\BUS\QuanLyThuVienHVKTQS\obj\Debug\QuanLyThuVienHVKTQS.pdb
