@@ -123,5 +123,29 @@ namespace QuanLyThuVienHVKTQS
         {
 
         }
+
+        private void txtTKMuon_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtTKMuon.Text))
+            {
+                LoadMuon();
+            }
+            else
+            {
+                dgvDSMuon.DataSource = MuonTraBUL.Instance.TKMuonSach(txtTKMuon.Text.Trim());
+            }
+        }
+
+        private void txtTKTra_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtTKTra.Text))
+            {
+                LoadTra();
+            }
+            else
+            {
+                dgvDSTra.DataSource = MuonTraBUL.Instance.TKMuonSach(txtTKTra.Text.Trim());
+            }
+        }
     }
 }

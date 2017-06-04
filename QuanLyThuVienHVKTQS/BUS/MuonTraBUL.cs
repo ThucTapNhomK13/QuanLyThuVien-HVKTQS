@@ -56,6 +56,21 @@ namespace BUL
             return false;
         }
 
+        public DataTable TKMuonSach (string tukhoa)
+        {
+            string query = "select * from MuonTra ";
+            query += " where idthethuvien like '%'+@tukhoa+'%'";
+            query += " union ";
+            query += " select * from MuonTra ";
+            query += " where idsach like '%'+@tukhoa+'%'";
+
+            //int id = int.Parse(tukhoa);
+            Dictionary<string, object> para = new Dictionary<string, object>();
+            para.Add("@tukhoa", tukhoa);
+
+            return DBConnect.Instance.Select(query, para);
+        }
+
         public bool TraSach (MuonTra mt)
         {
             string query = "update MuonTra ";

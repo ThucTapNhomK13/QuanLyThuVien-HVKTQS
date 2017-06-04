@@ -46,9 +46,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnTKMuon = new System.Windows.Forms.Button();
             this.txtTKMuon = new System.Windows.Forms.TextBox();
             this.dgvDSMuon = new System.Windows.Forms.DataGridView();
+            this.clIdM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clngaymuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clhanmuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clngaytra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnguoimuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clMSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -64,16 +70,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTKTra = new System.Windows.Forms.Button();
             this.txtTKTra = new System.Windows.Forms.TextBox();
             this.dgvDSTra = new System.Windows.Forms.DataGridView();
-            this.clIdM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clngaymuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clhanmuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clngaytra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnguoimuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clMSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTngaymuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clThanmuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,6 +79,8 @@
             this.clTnhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTnguoimuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -116,9 +116,9 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.btnTKMuon);
             this.panel3.Controls.Add(this.txtTKMuon);
             this.panel3.Controls.Add(this.dgvDSMuon);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
@@ -274,23 +274,14 @@
             this.label11.TabIndex = 3;
             this.label11.Text = "Quản lý mượn";
             // 
-            // btnTKMuon
-            // 
-            this.btnTKMuon.Location = new System.Drawing.Point(499, 115);
-            this.btnTKMuon.Name = "btnTKMuon";
-            this.btnTKMuon.Size = new System.Drawing.Size(87, 31);
-            this.btnTKMuon.TabIndex = 2;
-            this.btnTKMuon.Text = "Tìm kiếm";
-            this.btnTKMuon.UseVisualStyleBackColor = true;
-            this.btnTKMuon.Click += new System.EventHandler(this.btnTKMuon_Click);
-            // 
             // txtTKMuon
             // 
-            this.txtTKMuon.Location = new System.Drawing.Point(116, 114);
-            this.txtTKMuon.Multiline = true;
+            this.txtTKMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTKMuon.Location = new System.Drawing.Point(148, 124);
             this.txtTKMuon.Name = "txtTKMuon";
-            this.txtTKMuon.Size = new System.Drawing.Size(359, 32);
+            this.txtTKMuon.Size = new System.Drawing.Size(359, 26);
             this.txtTKMuon.TabIndex = 1;
+            this.txtTKMuon.TextChanged += new System.EventHandler(this.txtTKMuon_TextChanged);
             // 
             // dgvDSMuon
             // 
@@ -314,6 +305,61 @@
             this.dgvDSMuon.TabIndex = 0;
             this.dgvDSMuon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSMuon_CellClick);
             // 
+            // clIdM
+            // 
+            this.clIdM.DataPropertyName = "id";
+            this.clIdM.HeaderText = "Id";
+            this.clIdM.Name = "clIdM";
+            this.clIdM.ReadOnly = true;
+            this.clIdM.Visible = false;
+            // 
+            // clngaymuon
+            // 
+            this.clngaymuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clngaymuon.DataPropertyName = "ngaymuon";
+            this.clngaymuon.HeaderText = "Ngày mượn";
+            this.clngaymuon.Name = "clngaymuon";
+            this.clngaymuon.ReadOnly = true;
+            // 
+            // clhanmuon
+            // 
+            this.clhanmuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clhanmuon.DataPropertyName = "hanmuon";
+            this.clhanmuon.HeaderText = "Hạn mượn";
+            this.clhanmuon.Name = "clhanmuon";
+            this.clhanmuon.ReadOnly = true;
+            // 
+            // clngaytra
+            // 
+            this.clngaytra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clngaytra.DataPropertyName = "ngaytra";
+            this.clngaytra.HeaderText = "Ngày trả";
+            this.clngaytra.Name = "clngaytra";
+            this.clngaytra.ReadOnly = true;
+            // 
+            // clnhanvien
+            // 
+            this.clnhanvien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnhanvien.DataPropertyName = "idnhansu";
+            this.clnhanvien.HeaderText = "Nhân viên";
+            this.clnhanvien.Name = "clnhanvien";
+            this.clnhanvien.ReadOnly = true;
+            // 
+            // clnguoimuon
+            // 
+            this.clnguoimuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnguoimuon.DataPropertyName = "idthethuvien";
+            this.clnguoimuon.HeaderText = "Người mượn";
+            this.clnguoimuon.Name = "clnguoimuon";
+            this.clnguoimuon.ReadOnly = true;
+            // 
+            // clMSach
+            // 
+            this.clMSach.DataPropertyName = "idsach";
+            this.clMSach.HeaderText = "Mã sách";
+            this.clMSach.Name = "clMSach";
+            this.clMSach.ReadOnly = true;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panel1);
@@ -328,9 +374,9 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnTKTra);
             this.panel1.Controls.Add(this.txtTKTra);
             this.panel1.Controls.Add(this.dgvDSTra);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -465,23 +511,14 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Quản lý trả";
             // 
-            // btnTKTra
-            // 
-            this.btnTKTra.Location = new System.Drawing.Point(499, 115);
-            this.btnTKTra.Name = "btnTKTra";
-            this.btnTKTra.Size = new System.Drawing.Size(87, 31);
-            this.btnTKTra.TabIndex = 2;
-            this.btnTKTra.Text = "Tìm kiếm";
-            this.btnTKTra.UseVisualStyleBackColor = true;
-            this.btnTKTra.Click += new System.EventHandler(this.btnTKTra_Click);
-            // 
             // txtTKTra
             // 
-            this.txtTKTra.Location = new System.Drawing.Point(116, 114);
-            this.txtTKTra.Multiline = true;
+            this.txtTKTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTKTra.Location = new System.Drawing.Point(174, 120);
             this.txtTKTra.Name = "txtTKTra";
-            this.txtTKTra.Size = new System.Drawing.Size(359, 32);
+            this.txtTKTra.Size = new System.Drawing.Size(359, 26);
             this.txtTKTra.TabIndex = 1;
+            this.txtTKTra.TextChanged += new System.EventHandler(this.txtTKTra_TextChanged);
             // 
             // dgvDSTra
             // 
@@ -504,61 +541,6 @@
             this.dgvDSTra.Size = new System.Drawing.Size(697, 332);
             this.dgvDSTra.TabIndex = 0;
             this.dgvDSTra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTra_CellClick);
-            // 
-            // clIdM
-            // 
-            this.clIdM.DataPropertyName = "id";
-            this.clIdM.HeaderText = "Id";
-            this.clIdM.Name = "clIdM";
-            this.clIdM.ReadOnly = true;
-            this.clIdM.Visible = false;
-            // 
-            // clngaymuon
-            // 
-            this.clngaymuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clngaymuon.DataPropertyName = "ngaymuon";
-            this.clngaymuon.HeaderText = "Ngày mượn";
-            this.clngaymuon.Name = "clngaymuon";
-            this.clngaymuon.ReadOnly = true;
-            // 
-            // clhanmuon
-            // 
-            this.clhanmuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clhanmuon.DataPropertyName = "hanmuon";
-            this.clhanmuon.HeaderText = "Hạn mượn";
-            this.clhanmuon.Name = "clhanmuon";
-            this.clhanmuon.ReadOnly = true;
-            // 
-            // clngaytra
-            // 
-            this.clngaytra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clngaytra.DataPropertyName = "ngaytra";
-            this.clngaytra.HeaderText = "Ngày trả";
-            this.clngaytra.Name = "clngaytra";
-            this.clngaytra.ReadOnly = true;
-            // 
-            // clnhanvien
-            // 
-            this.clnhanvien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clnhanvien.DataPropertyName = "idnhansu";
-            this.clnhanvien.HeaderText = "Nhân viên";
-            this.clnhanvien.Name = "clnhanvien";
-            this.clnhanvien.ReadOnly = true;
-            // 
-            // clnguoimuon
-            // 
-            this.clnguoimuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clnguoimuon.DataPropertyName = "idthethuvien";
-            this.clnguoimuon.HeaderText = "Người mượn";
-            this.clnguoimuon.Name = "clnguoimuon";
-            this.clnguoimuon.ReadOnly = true;
-            // 
-            // clMSach
-            // 
-            this.clMSach.DataPropertyName = "idsach";
-            this.clMSach.HeaderText = "Mã sách";
-            this.clMSach.Name = "clMSach";
-            this.clMSach.ReadOnly = true;
             // 
             // clTma
             // 
@@ -615,6 +597,26 @@
             this.clTSach.Name = "clTSach";
             this.clTSach.ReadOnly = true;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(71, 127);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(71, 20);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Tìm kiếm";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(86, 123);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(71, 20);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Tìm kiếm";
+            // 
             // fMuonTraSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -649,14 +651,12 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btnTKMuon;
         private System.Windows.Forms.TextBox txtTKMuon;
         private System.Windows.Forms.DataGridView dgvDSMuon;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnTKTra;
         private System.Windows.Forms.TextBox txtTKTra;
         private System.Windows.Forms.DataGridView dgvDSTra;
         private System.Windows.Forms.Button btnNLMuon;
@@ -697,5 +697,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clTnhanvien;
         private System.Windows.Forms.DataGridViewTextBoxColumn clTnguoimuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn clTSach;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }

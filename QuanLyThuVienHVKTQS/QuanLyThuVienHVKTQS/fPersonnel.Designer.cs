@@ -56,7 +56,6 @@
             this.picNV = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnTKNhanVien = new System.Windows.Forms.Button();
             this.txtTKNhanVien = new System.Windows.Forms.TextBox();
             this.dgvDSNV = new System.Windows.Forms.DataGridView();
             this.clMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +69,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panKhoSach = new System.Windows.Forms.Panel();
+            this.btnNhap = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -81,7 +81,6 @@
             this.dgvKhoSach = new System.Windows.Forms.DataGridView();
             this.tenkho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vitri = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNhap = new System.Windows.Forms.Button();
             this.cmtDGV.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -286,7 +285,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(28, 367);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 15);
+            this.label4.Size = new System.Drawing.Size(58, 15);
             this.label4.TabIndex = 2;
             this.label4.Text = "Tài khoản";
             // 
@@ -353,7 +352,6 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.btnTKNhanVien);
             this.panel1.Controls.Add(this.txtTKNhanVien);
             this.panel1.Controls.Add(this.dgvDSNV);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -372,16 +370,6 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Quản lý nhân sự";
             // 
-            // btnTKNhanVien
-            // 
-            this.btnTKNhanVien.Location = new System.Drawing.Point(556, 140);
-            this.btnTKNhanVien.Name = "btnTKNhanVien";
-            this.btnTKNhanVien.Size = new System.Drawing.Size(87, 31);
-            this.btnTKNhanVien.TabIndex = 2;
-            this.btnTKNhanVien.Text = "Tìm kiếm";
-            this.btnTKNhanVien.UseVisualStyleBackColor = true;
-            this.btnTKNhanVien.Click += new System.EventHandler(this.btnTKNhanVien_Click);
-            // 
             // txtTKNhanVien
             // 
             this.txtTKNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -389,6 +377,7 @@
             this.txtTKNhanVien.Name = "txtTKNhanVien";
             this.txtTKNhanVien.Size = new System.Drawing.Size(359, 30);
             this.txtTKNhanVien.TabIndex = 1;
+            this.txtTKNhanVien.TextChanged += new System.EventHandler(this.txtTKNhanVien_TextChanged);
             // 
             // dgvDSNV
             // 
@@ -515,6 +504,16 @@
             this.panKhoSach.Size = new System.Drawing.Size(357, 524);
             this.panKhoSach.TabIndex = 11;
             // 
+            // btnNhap
+            // 
+            this.btnNhap.Location = new System.Drawing.Point(6, 408);
+            this.btnNhap.Name = "btnNhap";
+            this.btnNhap.Size = new System.Drawing.Size(75, 29);
+            this.btnNhap.TabIndex = 17;
+            this.btnNhap.Text = "Nhập kho";
+            this.btnNhap.UseVisualStyleBackColor = true;
+            this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
+            // 
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(276, 408);
@@ -633,16 +632,6 @@
             this.vitri.Name = "vitri";
             this.vitri.ReadOnly = true;
             // 
-            // btnNhap
-            // 
-            this.btnNhap.Location = new System.Drawing.Point(6, 408);
-            this.btnNhap.Name = "btnNhap";
-            this.btnNhap.Size = new System.Drawing.Size(75, 29);
-            this.btnNhap.TabIndex = 17;
-            this.btnNhap.Text = "Nhập kho";
-            this.btnNhap.UseVisualStyleBackColor = true;
-            this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
-            // 
             // fPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -694,7 +683,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAnhNV;
         private System.Windows.Forms.PictureBox picNV;
-        private System.Windows.Forms.Button btnTKNhanVien;
         private System.Windows.Forms.TextBox txtTKNhanVien;
         private System.Windows.Forms.DataGridView dgvDSNV;
         private System.Windows.Forms.CheckBox ckbQLNV;

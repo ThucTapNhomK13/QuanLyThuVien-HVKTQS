@@ -197,7 +197,7 @@ namespace QuanLyThuVienHVKTQS
         private void btnTKNhanVien_Click(object sender, EventArgs e)
         {
 
-            dgvDSNV.DataSource = NhanSuBUL.Instance.getByIdNS(txtTKNhanVien.Text);
+            
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -294,6 +294,19 @@ namespace QuanLyThuVienHVKTQS
             txtTenKho.Clear();
             txtViTri.Clear();
             txtTenKho.Focus();
+        }
+
+        private void txtTKNhanVien_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtTKNhanVien.Text))
+            {
+                LoadNhanSu();
+            }
+            else
+            {
+                dgvDSNV.DataSource = NhanSuBUL.Instance.getByIdNS(txtTKNhanVien.Text);
+            }
+            
         }
     }
 }
