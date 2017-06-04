@@ -8,7 +8,7 @@ namespace DAO
 {
     public class ConnectStr
     {
-        public static string conStr = @"Data Source=MYPC\SQLEXPRESS;Initial Catalog=QuanLyThuVienHVKTQS;Integrated Security=True";
+        public static string conStr = @"Data Source=MRKCUONG\MKCUONG;Initial Catalog=QuanLyThuVienHVKTQS;Integrated Security=True";
 
         public static string HungCuongSQL = @"Data Source=MRKCUONG\MKCUONG;Initial Catalog=QuanLyThuVienHVKTQS;Integrated Security=True";
 
